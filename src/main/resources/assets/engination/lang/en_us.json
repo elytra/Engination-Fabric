@@ -1,0 +1,19 @@
+{
+	"blockgroup.engination.oneup.tip"                 : "Colorful blocks that just make you want to jump around",
+	"block.engination.oneup_cyan_block"          : "1Up - Cyan Block",
+	"block.engination.oneup_orange_block"        : "1Up - Orange Block",
+	"block.engination.oneup_cyan_brick"          : "1Up - Cyan Brick",
+	"block.engination.oneup_orange_brick"        : "1Up - Orange Brick",
+	"block.engination.oneup_gray_dents"          : "1Up - Gray Dents",
+	"block.engination.oneup_orange_dents"        : "1Up - Orange Dents",
+	"block.engination.oneup_ghost_brick"         : "1Up - Ghost Brick",
+	"block.engination.oneup_ghost_wood"          : "1Up - Ghost Wood",
+	"block.engination.oneup_reinforced"          : "1Up - Reinforced",
+	"block.engination.oneup_minty_rivets"        : "1Up - Minty Rivets",
+	"block.engination.oneup_aqua_seastone"       : "1Up - Aqua Seastone",
+	"block.engination.oneup_lime_seastone"       : "1Up - Lime Seastone",
+	"block.engination.oneup_castle_brick"        : "1Up - Castle Brick",
+	"block.engination.oneup_bevel"               : "1Up - Bevel",
+	"block.engination.oneup_uneven_gray_bricks"  : "1Up - Uneven Gray Bricks",
+	"block.engination.oneup_uneven_orange_bricks": "1Up - Uneven Orange Bricks"
+}
