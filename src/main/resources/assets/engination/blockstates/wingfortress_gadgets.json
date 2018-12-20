@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"": [
+			{ "model": "engination:item/wingfortress_gadgets_1" },
+			{ "model": "engination:item/wingfortress_gadgets_2" },
+			{ "model": "engination:item/wingfortress_gadgets_3" },
+			{ "model": "engination:item/wingfortress_gadgets_4" }
+		]
+	}
+}

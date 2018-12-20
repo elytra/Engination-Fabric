@@ -101,6 +101,23 @@ public class EnginationBlocks {
 		block("loosestone_figaro_edging",        Material.STONE, DyeColor.BROWN,  "loosestone");
 		block("loosestone_figaro_shingles",      Material.STONE, DyeColor.BROWN,  "loosestone");
 		block("loosestone_zozo_acidic_gravel",   Material.STONE, DyeColor.GRAY,   "loosestone");
+		
+		block("wingfortress_yoku",         Material.METAL, DyeColor.GRAY,       "wingfortress");
+		block("wingfortress_orb",          Material.METAL, DyeColor.LIGHT_BLUE, "wingfortress");
+		block("wingfortress_platforms",    Material.METAL, DyeColor.LIGHT_BLUE, "wingfortress");
+		block("wingfortress_gadgets",      Material.METAL, DyeColor.LIGHT_BLUE, "wingfortress");
+		block("wingfortress_panel",        Material.METAL, DyeColor.LIGHT_BLUE, "wingfortress");
+		block("wingfortress_caution",      Material.METAL, DyeColor.LIGHT_BLUE, "wingfortress");
+		block("wingfortress_scaffold",     Material.METAL, DyeColor.LIGHT_BLUE, "wingfortress");
+		block("wingfortress_intricate",    Material.METAL, DyeColor.LIGHT_BLUE, "wingfortress");
+		block("wingfortress_fluids",       Material.METAL, DyeColor.LIGHT_BLUE, "wingfortress");
+		block("wingfortress_boiler",       Material.METAL, DyeColor.LIGHT_BLUE, "wingfortress");
+		block("wingfortress_corroded",     Material.METAL, DyeColor.LIGHT_BLUE, "wingfortress");
+		block("wingfortress_ledge",        Material.METAL, DyeColor.LIGHT_BLUE, "wingfortress");
+		block("wingfortress_support",      Material.METAL, DyeColor.LIGHT_BLUE, "wingfortress");
+		block("wingfortress_vent",         Material.METAL, DyeColor.LIGHT_BLUE, "wingfortress");
+		block("wingfortress_dark_gray",    Material.METAL, DyeColor.LIGHT_BLUE, "wingfortress");
+		block("wingfortress_rivets",       Material.METAL, DyeColor.LIGHT_BLUE, "wingfortress");
 	}
 	
 	

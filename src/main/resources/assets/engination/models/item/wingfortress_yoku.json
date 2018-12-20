@@ -1,0 +1,12 @@
+{
+	"parent": "minecraft:block/cube",
+	"textures": {
+		"particle": "engination:blocks/cosmetic/wingfortress/wires",
+		"north": "engination:blocks/cosmetic/wingfortress/widget_back",
+		"south": "engination:blocks/cosmetic/wingfortress/widget_back",
+		"east" : "engination:blocks/cosmetic/wingfortress/widget",
+		"west" : "engination:blocks/cosmetic/wingfortress/widget",
+		"up"   : "engination:blocks/cosmetic/wingfortress/widget_top",
+		"down" : "engination:blocks/cosmetic/wingfortress/widget_top"
+	}
+}

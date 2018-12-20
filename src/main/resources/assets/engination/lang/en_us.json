@@ -90,5 +90,23 @@
 	"block.engination.loosestone_thamasa_bricks"      : "LooseStone - Thamasa Bricks",
 	"block.engination.loosestone_figaro_edging"       : "LooseStone - Figaro Tan Edging Stone",
 	"block.engination.loosestone_figaro_shingles"     : "LooseStone - Figaro Shingles",
-	"block.engination.loosestone_zozo_acidic_gravel"  : "LooseStone - Zozo Acidic Gravel"
+	"block.engination.loosestone_zozo_acidic_gravel"  : "LooseStone - Zozo Acidic Gravel",
+	
+	"blockgroup.engination.wingfortress.tip"  : "Tech that's light on its feet",
+	"block.engination.wingfortress_yoku"      : "WingFortress - Yoku",
+	"block.engination.wingfortress_orb"       : "WingFortress - Orb",
+	"block.engination.wingfortress_platforms" : "WingFortress - Platforms",
+	"block.engination.wingfortress_gadgets"   : "WingFortress - Gadgets",
+	"block.engination.wingfortress_panel"     : "WingFortress - Panel",
+	"block.engination.wingfortress_caution"   : "WingFortress - Caution",
+	"block.engination.wingfortress_scaffold"  : "WingFortress - Scaffold",
+	"block.engination.wingfortress_intricate" : "WingFortress - Intricate",
+	"block.engination.wingfortress_fluids"    : "WingFortress - Fluids",
+	"block.engination.wingfortress_boiler"    : "WingFortress - Boiler",
+	"block.engination.wingfortress_corroded"  : "WingFortress - Corroded",
+	"block.engination.wingfortress_ledge"     : "WingFortress - Ledge",
+	"block.engination.wingfortress_support"   : "WingFortress - Support",
+	"block.engination.wingfortress_vent"      : "WingFortress - Vent",
+	"block.engination.wingfortress_dark_gray" : "WingFortress - Dark Gray Block",
+	"block.engination.wingfortress_rivets"    : "WingFortress - Rivets"
 }
