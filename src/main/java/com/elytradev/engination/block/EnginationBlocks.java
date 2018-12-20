@@ -84,6 +84,23 @@ public class EnginationBlocks {
 		block("wooden_lofi",               Material.WOOD, DyeColor.BROWN, "wooden");
 		block("wooden_lofi_panel",         Material.WOOD, DyeColor.BROWN, "wooden");
 		block("wooden_polished",           Material.WOOD, DyeColor.BROWN, "wooden");
+		
+		block("loosestone_zozo",                 Material.STONE, DyeColor.PURPLE, "loosestone");
+		block("loosestone_vector",               Material.STONE, DyeColor.GRAY,   "loosestone");
+		block("loosestone_thamasa",              Material.STONE, DyeColor.GRAY,   "loosestone");
+		block("loosestone_figaro",               Material.STONE, DyeColor.GRAY,   "loosestone");
+		block("loosestone_figaro_path",          Material.STONE, DyeColor.GRAY,   "loosestone");
+		block("loosestone_figaro_bright_canal",  Material.STONE, DyeColor.GRAY,   "loosestone");
+		block("loosestone_figaro_regular_canal", Material.STONE, DyeColor.GRAY,   "loosestone");
+		block("loosestone_figaro_dark_canal",    Material.STONE, DyeColor.GRAY,   "loosestone");
+		block("loosestone_figaro_black_canal",   Material.STONE, DyeColor.GRAY,   "loosestone");
+		block("loosestone_figaro_bricks",        Material.STONE, DyeColor.GRAY,   "loosestone");
+		block("loosestone_zozo_roof_slate",      Material.STONE, DyeColor.BLACK,  "loosestone");
+		block("loosestone_vector_bricks",        Material.STONE, DyeColor.GRAY,   "loosestone");
+		block("loosestone_thamasa_bricks",       Material.STONE, DyeColor.RED,    "loosestone");
+		block("loosestone_figaro_edging",        Material.STONE, DyeColor.BROWN,  "loosestone");
+		block("loosestone_figaro_shingles",      Material.STONE, DyeColor.BROWN,  "loosestone");
+		block("loosestone_zozo_acidic_gravel",   Material.STONE, DyeColor.GRAY,   "loosestone");
 	}
 	
 	

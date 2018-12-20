@@ -72,5 +72,23 @@
 	"block.engination.wooden_laminated"           : "Wooden - Laminated",
 	"block.engination.wooden_lofi"                : "Wooden - Lo-Fi",
 	"block.engination.wooden_lofi_panel"          : "Wooden - Lo-Fi Panel",
-	"block.engination.wooden_polished"            : "Wooden - Polished"
+	"block.engination.wooden_polished"            : "Wooden - Polished",
+	
+	"blockgroup.engination.loosestone.tip"            : "Finally fantastic rocks",
+	"block.engination.loosestone_zozo"                : "LooseStone - Zozo",
+	"block.engination.loosestone_vector"              : "LooseStone - Vector",
+	"block.engination.loosestone_thamasa"             : "LooseStone - Thamasa",
+	"block.engination.loosestone_figaro"              : "LooseStone - Figaro",
+	"block.engination.loosestone_figaro_path"         : "LooseStone - Figaro Pathstone",
+	"block.engination.loosestone_figaro_bright_canal" : "LooseStone - Bright Figaro Canal",
+	"block.engination.loosestone_figaro_regular_canal": "LooseStone - Regular Figaro Canal",
+	"block.engination.loosestone_figaro_dark_canal"   : "LooseStone - Dark Figaro Canal",
+	"block.engination.loosestone_figaro_black_canal"  : "LooseStone - Black Figaro Canal",
+	"block.engination.loosestone_figaro_bricks"       : "LooseStone - Figaro Bricks",
+	"block.engination.loosestone_zozo_roof_slate"     : "LooseStone - Zozo Roof Slate",
+	"block.engination.loosestone_vector_bricks"       : "LooseStone - Vector Bricks",
+	"block.engination.loosestone_thamasa_bricks"      : "LooseStone - Thamasa Bricks",
+	"block.engination.loosestone_figaro_edging"       : "LooseStone - Figaro Tan Edging Stone",
+	"block.engination.loosestone_figaro_shingles"     : "LooseStone - Figaro Shingles",
+	"block.engination.loosestone_zozo_acidic_gravel"  : "LooseStone - Zozo Acidic Gravel"
 }
