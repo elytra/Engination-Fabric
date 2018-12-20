@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"": [
+			{ "model": "engination:item/gestahl_tangled_pipes_1" },
+			{ "model": "engination:item/gestahl_tangled_pipes_2" },
+			{ "model": "engination:item/gestahl_tangled_pipes_3" },
+			{ "model": "engination:item/gestahl_tangled_pipes_hatch" }
+		]
+	}
+}

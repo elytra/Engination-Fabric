@@ -1,0 +1,9 @@
+{
+	"variants": {
+		"": [
+			{ "model": "engination:item/gestahl_catapult_tech_1" },
+			{ "model": "engination:item/gestahl_catapult_tech_2" },
+			{ "model": "engination:item/gestahl_catapult_tech_3" }
+		]
+	}
+}

@@ -1,0 +1,7 @@
+{
+	"variants": {
+		"axis=y":	{ "model": "engination:item/tourian_pillar" },
+		"axis=z":	{ "model": "engination:item/tourian_pillar", "x": 90 },
+		"axis=x":	{ "model": "engination:item/tourian_pillar", "x": 90, "y": 90 }
+	}
+}

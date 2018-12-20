@@ -1,0 +1,8 @@
+{
+	"parent": "block/cube_column",
+	"textures": {
+		"side": "engination:blocks/cosmetic/gestahl/platform",
+		"end" : "engination:blocks/cosmetic/gestahl/dark_panel",
+		"particle": "engination:blocks/cosmetic/gestahl/platform"
+	}
+}

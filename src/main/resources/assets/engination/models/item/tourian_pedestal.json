@@ -1,0 +1,8 @@
+{
+	"parent": "block/cube_column",
+	"textures": {
+		"side":     "engination:blocks/cosmetic/tourian/pedestal",
+		"end":      "engination:blocks/cosmetic/tourian/pedestal_top",
+		"particle": "engination:blocks/cosmetic/tourian/pedestal"
+	}
+}

@@ -1,0 +1,8 @@
+{
+	"parent": "block/cube_column",
+	"textures": {
+		"side": "engination:blocks/cosmetic/gestahl/girder",
+		"end" : "engination:blocks/cosmetic/gestahl/column_end",
+		"particle": "engination:blocks/cosmetic/gestahl/girder"
+	}
+}

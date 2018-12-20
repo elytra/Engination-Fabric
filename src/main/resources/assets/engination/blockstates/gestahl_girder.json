@@ -1,0 +1,7 @@
+{
+	"variants": {
+		"axis=y":	{ "model": "engination:item/gestahl_girder" },
+		"axis=z":	{ "model": "engination:item/gestahl_girder", "x": 90 },
+		"axis=x":	{ "model": "engination:item/gestahl_girder", "x": 90, "y": 90 }
+	}
+}

@@ -1,0 +1,7 @@
+{
+	"variants": {
+		"axis=y":	{ "model": "engination:item/gestahl_scaffold" },
+		"axis=z":	{ "model": "engination:item/gestahl_scaffold", "x": 90 },
+		"axis=x":	{ "model": "engination:item/gestahl_scaffold", "x": 90, "y": 90 }
+	}
+}

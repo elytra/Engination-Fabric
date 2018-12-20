@@ -1,0 +1,8 @@
+{
+	"parent": "block/cube_column",
+	"textures": {
+		"side":     "engination:blocks/cosmetic/tourian/pillar",
+		"end":      "engination:blocks/cosmetic/tourian/pillar_end",
+		"particle": "engination:blocks/cosmetic/tourian/pillar"
+	}
+}

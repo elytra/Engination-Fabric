@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"": [
+			{ "model": "engination:item/tourian_block" },
+			{ "model": "engination:item/tourian_cracked_block" },
+			{ "model": "engination:item/tourian_hollow_block" },
+			{ "model": "engination:item/tourian_ruined_block" }
+		]
+	}
+}
