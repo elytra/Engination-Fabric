@@ -1,0 +1,6 @@
+{
+	"parent": "engination:item/presidential",
+	"textures": {
+		"all": "engination:blocks/cosmetic/presidential/grate"
+	}
+}

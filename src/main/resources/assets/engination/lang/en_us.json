@@ -207,5 +207,42 @@
 	"block.engination.lamp_green"           : "Crystal Lamp - Green",
 	"block.engination.lamp_mint"            : "Crystal Lamp - Mint",
 	"block.engination.lamp_sky"             : "Crystal Lamp - Sky",
-	"block.engination.lamp_blue"            : "Crystal Lamp - Blue"
+	"block.engination.lamp_blue"            : "Crystal Lamp - Blue",
+	
+	"blockgroup.engination.carmine"       : "Carmine",
+	"blockgroup.engination.carmine.tip"   : "Take back your poor compassion - / Joy was a flame in me / Too steady to destroy.",
+	"__comment.blockgroup.carmine"        : "--Sara Teasdale",
+	"block.engination.carmine_brick"      : "Carmine - Brick",
+	"block.engination.carmine_smooth"     : "Carmine - Smooth",
+	"block.engination.carmine_tiles"      : "Carmine - Tiles",
+	"block.engination.carmine_small_tiles": "Carmine - Small Tiles",
+	"block.engination.carmine_large_tile" : "Carmine - Large Tile",
+	
+	"blockgroup.engination.erechtheion"        : "Erechtheion",
+	"blockgroup.engination.erechtheion.tip"    : "Don't feed the Caryatids",
+	"block.engination.erechtheion_brick"       : "Erechtheion - Brick",
+	"block.engination.erechtheion_smooth"      : "Erechtheion - Smooth",
+	"block.engination.erechtheion_tiles"       : "Erechtheion - Tiles",
+	"block.engination.erechtheion_small_tiles" : "Erechtheion - Small Tiles",
+	"block.engination.erechtheion_large_tile"  : "Erechtheion - Large Tile",
+	
+	"blockgroup.engination.verdigris"       : "Verdigris",
+	"blockgroup.engination.verdigris.tip"   : "There's no stopping progress. Of rust, I mean. There's no stopping rust.",
+	"block.engination.verdigris_surface"    : "Verdigris - Surface",
+	"block.engination.verdigris_grate"      : "Verdigris - Grate",
+	"block.engination.verdigris_spout"      : "Verdigris - Spout",
+	"block.engination.verdigris_yoku_block" : "Verdigris - Yoku Block",
+	"block.engination.verdigris_tiles"      : "Verdigris - Tiles",
+	"block.engination.verdigris_triangles"  : "Verdigris - Triangles",
+	
+	"blockgroup.engination.presidential"        : "Presidential",
+	"blockgroup.engination.presidential.tip"    : "Fantastic, stylish beginner blocks, perfect for little hands and big imaginations.",
+	"block.engination.presidential_large_tile"  : "Presidential - Huge Tile",
+	"block.engination.presidential_tiles"       : "Presidential - Tiles",
+	"block.engination.presidential_dots"        : "Presidential - Dots",
+	"block.engination.presidential_grate"       : "Presidential - Grate",
+	"block.engination.presidential_embossed"    : "Presidential - Embossed",
+	"block.engination.presidential_brick"       : "Presidential - Wall Brick",
+	"block.engination.presidential_panel"       : "Presidential - Panel",
+	"block.engination.presidential_t"        : "Presidential - T"
 }

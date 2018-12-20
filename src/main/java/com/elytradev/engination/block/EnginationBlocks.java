@@ -77,19 +77,6 @@ public class EnginationBlocks {
 				"wattle", "horizontal_wattle", "small_square_wattle", "eave_wattle", "brace_wattle", "port_wattle", "star_brace_wattle",
 				"mini_window", "laminated", "lofi", "lofi_panel", "polished"
 				);
-		//block("wooden_crate",              Material.WOOD, DyeColor.BROWN, "wooden");
-		//block("wooden_wattle",             Material.WOOD, DyeColor.BROWN, "wooden");
-		//block("wooden_horizontal_wattle",  Material.WOOD, DyeColor.BROWN, "wooden");
-		//block("wooden_small_square_wattle",Material.WOOD, DyeColor.BROWN, "wooden");
-		//block("wooden_eave_wattle",        Material.WOOD, DyeColor.BROWN, "wooden");
-		//block("wooden_brace_wattle",       Material.WOOD, DyeColor.BROWN, "wooden");
-		//block("wooden_port_wattle",        Material.WOOD, DyeColor.BROWN, "wooden");
-		//block("wooden_star_brace_wattle",  Material.WOOD, DyeColor.BROWN, "wooden");
-		//block("wooden_mini_window",        Material.WOOD, DyeColor.BROWN, "wooden");
-		//block("wooden_laminated",          Material.WOOD, DyeColor.BROWN, "wooden");
-		//block("wooden_lofi",               Material.WOOD, DyeColor.BROWN, "wooden");
-		//block("wooden_lofi_panel",         Material.WOOD, DyeColor.BROWN, "wooden");
-		//block("wooden_polished",           Material.WOOD, DyeColor.BROWN, "wooden");
 		
 		/** LooseStone */
 		blocks("loosestone", Material.STONE, DyeColor.PURPLE, "zozo");
@@ -151,6 +138,22 @@ public class EnginationBlocks {
 		lamps("lamp", Material.GLASS, DyeColor.WHITE,
 				"golbez", "pulsing", "black", "undersea_palace", "magenta", "pink", "orange", "yellow", "lime",
 				"green", "mint", "sky", "blue"
+				);
+		
+		blocks("carmine", Material.STONE, DyeColor.RED,
+				"brick", "smooth", "tiles", "small_tiles", "large_tile"
+				);
+		
+		blocks("erechtheion", Material.STONE, DyeColor.WHITE,
+				"brick", "smooth", "tiles", "small_tiles", "large_tile"
+				);
+		
+		blocks("verdigris", Material.METAL, DyeColor.GREEN,
+				"surface", "grate", "spout", "yoku_block", "tiles", "triangles"
+				);
+		
+		blocks("presidential", Material.METAL, DyeColor.YELLOW,
+				"large_tile", "tiles", "dots", "grate", "embossed", "brick", "panel", "t"
 				);
 	}
 	
