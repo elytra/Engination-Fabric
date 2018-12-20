@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import net.fabricmc.fabric.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.item.Item;
@@ -71,55 +72,100 @@ public class EnginationBlocks {
 		block("tourian_interface",         Material.METAL, DyeColor.PURPLE,     "tourian");
 		pillar("tourian_pillar",           Material.METAL, DyeColor.LIGHT_GRAY, "tourian");
 		
-		block("wooden_crate",              Material.WOOD, DyeColor.BROWN, "wooden");
-		block("wooden_wattle",             Material.WOOD, DyeColor.BROWN, "wooden");
-		block("wooden_horizontal_wattle",  Material.WOOD, DyeColor.BROWN, "wooden");
-		block("wooden_small_square_wattle",Material.WOOD, DyeColor.BROWN, "wooden");
-		block("wooden_eave_wattle",        Material.WOOD, DyeColor.BROWN, "wooden");
-		block("wooden_brace_wattle",       Material.WOOD, DyeColor.BROWN, "wooden");
-		block("wooden_port_wattle",        Material.WOOD, DyeColor.BROWN, "wooden");
-		block("wooden_star_brace_wattle",  Material.WOOD, DyeColor.BROWN, "wooden");
-		block("wooden_mini_window",        Material.WOOD, DyeColor.BROWN, "wooden");
-		block("wooden_laminated",          Material.WOOD, DyeColor.BROWN, "wooden");
-		block("wooden_lofi",               Material.WOOD, DyeColor.BROWN, "wooden");
-		block("wooden_lofi_panel",         Material.WOOD, DyeColor.BROWN, "wooden");
-		block("wooden_polished",           Material.WOOD, DyeColor.BROWN, "wooden");
+		blocks("wooden", Material.WOOD, DyeColor.BROWN,
+				"crate",
+				"wattle", "horizontal_wattle", "small_square_wattle", "eave_wattle", "brace_wattle", "port_wattle", "star_brace_wattle",
+				"mini_window", "laminated", "lofi", "lofi_panel", "polished"
+				);
+		//block("wooden_crate",              Material.WOOD, DyeColor.BROWN, "wooden");
+		//block("wooden_wattle",             Material.WOOD, DyeColor.BROWN, "wooden");
+		//block("wooden_horizontal_wattle",  Material.WOOD, DyeColor.BROWN, "wooden");
+		//block("wooden_small_square_wattle",Material.WOOD, DyeColor.BROWN, "wooden");
+		//block("wooden_eave_wattle",        Material.WOOD, DyeColor.BROWN, "wooden");
+		//block("wooden_brace_wattle",       Material.WOOD, DyeColor.BROWN, "wooden");
+		//block("wooden_port_wattle",        Material.WOOD, DyeColor.BROWN, "wooden");
+		//block("wooden_star_brace_wattle",  Material.WOOD, DyeColor.BROWN, "wooden");
+		//block("wooden_mini_window",        Material.WOOD, DyeColor.BROWN, "wooden");
+		//block("wooden_laminated",          Material.WOOD, DyeColor.BROWN, "wooden");
+		//block("wooden_lofi",               Material.WOOD, DyeColor.BROWN, "wooden");
+		//block("wooden_lofi_panel",         Material.WOOD, DyeColor.BROWN, "wooden");
+		//block("wooden_polished",           Material.WOOD, DyeColor.BROWN, "wooden");
 		
-		block("loosestone_zozo",                 Material.STONE, DyeColor.PURPLE, "loosestone");
-		block("loosestone_vector",               Material.STONE, DyeColor.GRAY,   "loosestone");
-		block("loosestone_thamasa",              Material.STONE, DyeColor.GRAY,   "loosestone");
-		block("loosestone_figaro",               Material.STONE, DyeColor.GRAY,   "loosestone");
-		block("loosestone_figaro_path",          Material.STONE, DyeColor.GRAY,   "loosestone");
-		block("loosestone_figaro_bright_canal",  Material.STONE, DyeColor.GRAY,   "loosestone");
-		block("loosestone_figaro_regular_canal", Material.STONE, DyeColor.GRAY,   "loosestone");
-		block("loosestone_figaro_dark_canal",    Material.STONE, DyeColor.GRAY,   "loosestone");
-		block("loosestone_figaro_black_canal",   Material.STONE, DyeColor.GRAY,   "loosestone");
-		block("loosestone_figaro_bricks",        Material.STONE, DyeColor.GRAY,   "loosestone");
-		block("loosestone_zozo_roof_slate",      Material.STONE, DyeColor.BLACK,  "loosestone");
-		block("loosestone_vector_bricks",        Material.STONE, DyeColor.GRAY,   "loosestone");
-		block("loosestone_thamasa_bricks",       Material.STONE, DyeColor.RED,    "loosestone");
-		block("loosestone_figaro_edging",        Material.STONE, DyeColor.BROWN,  "loosestone");
-		block("loosestone_figaro_shingles",      Material.STONE, DyeColor.BROWN,  "loosestone");
-		block("loosestone_zozo_acidic_gravel",   Material.STONE, DyeColor.GRAY,   "loosestone");
+		/** LooseStone */
+		blocks("loosestone", Material.STONE, DyeColor.PURPLE, "zozo");
+		blocks("loosestone", Material.STONE, DyeColor.BLACK,  "zozo_roof_slate");
+		blocks("loosestone", Material.STONE, DyeColor.RED,    "thamasa_bricks");
+		blocks("loosestone", Material.STONE, DyeColor.BROWN,  "figaro_edging", "figaro_shingles");
+		blocks("loosestone", Material.STONE, DyeColor.GRAY,
+				"vector", "thamasa", "figaro", "figaro_path", "figaro_bright_canal", "figaro_regular_canal",
+				"figaro_dark_canal", "figaro_black_canal", "figaro_bricks", "vector_bricks", "zozo_acidic_gravel"
+				);
 		
-		block("wingfortress_yoku",         Material.METAL, DyeColor.GRAY,       "wingfortress");
-		block("wingfortress_orb",          Material.METAL, DyeColor.LIGHT_BLUE, "wingfortress");
-		block("wingfortress_platforms",    Material.METAL, DyeColor.LIGHT_BLUE, "wingfortress");
-		block("wingfortress_gadgets",      Material.METAL, DyeColor.LIGHT_BLUE, "wingfortress");
-		block("wingfortress_panel",        Material.METAL, DyeColor.LIGHT_BLUE, "wingfortress");
-		block("wingfortress_caution",      Material.METAL, DyeColor.LIGHT_BLUE, "wingfortress");
-		block("wingfortress_scaffold",     Material.METAL, DyeColor.LIGHT_BLUE, "wingfortress");
-		block("wingfortress_intricate",    Material.METAL, DyeColor.LIGHT_BLUE, "wingfortress");
-		block("wingfortress_fluids",       Material.METAL, DyeColor.LIGHT_BLUE, "wingfortress");
-		block("wingfortress_boiler",       Material.METAL, DyeColor.LIGHT_BLUE, "wingfortress");
-		block("wingfortress_corroded",     Material.METAL, DyeColor.LIGHT_BLUE, "wingfortress");
-		block("wingfortress_ledge",        Material.METAL, DyeColor.LIGHT_BLUE, "wingfortress");
-		block("wingfortress_support",      Material.METAL, DyeColor.LIGHT_BLUE, "wingfortress");
-		block("wingfortress_vent",         Material.METAL, DyeColor.LIGHT_BLUE, "wingfortress");
-		block("wingfortress_dark_gray",    Material.METAL, DyeColor.LIGHT_BLUE, "wingfortress");
-		block("wingfortress_rivets",       Material.METAL, DyeColor.LIGHT_BLUE, "wingfortress");
+		/** WingFortress */
+		blocks("wingfortress", Material.METAL, DyeColor.LIGHT_GRAY, "yoku", "rivets");
+		blocks("wingfortress", Material.METAL, DyeColor.GRAY,       "gadgets", "caution", "intricate", "dark_gray");
+		blocks("wingfortress", Material.METAL, DyeColor.BLUE,       "fluids");
+		blocks("wingfortress", Material.METAL, DyeColor.LIGHT_BLUE,
+				"orb", "platforms", "panel", "scaffold", "boiler", "corroded", "ledge", "support", "vent"
+				);
+		
+		
+		block("sanic_dark_checker",        Material.CLAY,  DyeColor.BLUE,   "sanic");
+		block("sanic_medium_checker",      Material.CLAY,  DyeColor.CYAN,   "sanic");
+		block("sanic_bright_checker",      Material.CLAY,  DyeColor.WHITE,  "sanic");
+		block("sanic_white_checker",       Material.CLAY,  DyeColor.WHITE,  "sanic");
+		block("sanic_darkest_tiles",       Material.CLAY,  DyeColor.BLUE,   "sanic");
+		block("sanic_dark_tiles",          Material.CLAY,  DyeColor.BLUE,   "sanic");
+		block("sanic_medium_tiles",        Material.CLAY,  DyeColor.CYAN,   "sanic");
+		block("sanic_bright_tiles",        Material.CLAY,  DyeColor.WHITE,  "sanic");
+		block("sanic_white_tiles",         Material.CLAY,  DyeColor.WHITE,  "sanic");
+		block("sanic_darkest_large_tile",  Material.CLAY,  DyeColor.BLUE,   "sanic");
+		block("sanic_dark_large_tile",     Material.CLAY,  DyeColor.BLUE,   "sanic");
+		block("sanic_medium_large_tile",   Material.CLAY,  DyeColor.CYAN,   "sanic");
+		block("sanic_bright_large_tile",   Material.CLAY,  DyeColor.WHITE,  "sanic");
+		block("sanic_white_large_tile",    Material.CLAY,  DyeColor.WHITE,  "sanic");
+		block("sanic_gold_oil_spike",      Material.METAL, DyeColor.YELLOW, "sanic");
+		block("sanic_purple_oil_spike",    Material.METAL, DyeColor.PURPLE, "sanic");
+		block("sanic_gold_oil_spikes",     Material.METAL, DyeColor.YELLOW, "sanic");
+		block("sanic_purple_oil_spikes",   Material.METAL, DyeColor.PURPLE, "sanic");
+		block("sanic_oil_checker",         Material.METAL, DyeColor.PURPLE, "sanic");
+		
+		blocks("dolomite", Material.STONE, DyeColor.BROWN,
+				"brick", "smooth", "tiles", "small_tiles", "large_tile", "hexagons", "prism",
+				"dark_brick", "dark_smooth", "dark_tiles", "dark_small_tiles", "dark_large_tile", "dark_hexagons", "dark_prism",
+				"checker", "small_checker"
+				);
+		
+		blocks("celestite", Material.STONE, DyeColor.LIGHT_BLUE,
+				"brick", "smooth", "tiles", "small_tiles", "large_tile", "hexagons", "prism",
+				"dark_brick", "dark_smooth", "dark_tiles", "dark_small_tiles", "dark_large_tile", "dark_hexagons", "dark_prism",
+				"checker", "small_checker"
+				);
+		
+		blocks("peridot", Material.STONE, DyeColor.LIME,
+				"brick", "rock", "tiles", "small_tiles", "large_tile", "hexagons", "prism",
+				"dark_brick", "dark_rock", "dark_tiles", "dark_small_tiles", "dark_large_tile", "dark_hexagons", "dark_prism",
+				"checker", "small_checker"
+				);
+		
+		lamps("lamp", Material.GLASS, DyeColor.WHITE,
+				"golbez", "pulsing", "black", "undersea_palace", "magenta", "pink", "orange", "yellow", "lime",
+				"green", "mint", "sky", "blue"
+				);
 	}
 	
+	
+	public static void blocks(String group, Material material, DyeColor color, String... varieties) {
+		for(String variety : varieties) {
+			block(group+"_"+variety, material, color, group);
+		}
+	}
+	
+	public static void lamps(String group, Material material, DyeColor color, String... varieties) {
+		for(String variety : varieties) {
+			lamp(group+"_"+variety, material, color, group);
+		}
+	}
 	
 	public static CosmeticBlock block(String name, Material material, DyeColor color, String group) {
 		CosmeticBlock result = new CosmeticBlock(material, color, group);
@@ -141,6 +187,26 @@ public class EnginationBlocks {
 	
 	public static CosmeticPillar pillar(String name, Material material, DyeColor color, String group) {
 		CosmeticPillar result = new CosmeticPillar(material, color, group);
+		List<Block> blockGroup = BLOCK_GROUPS.get(group);
+		if (blockGroup==null) {
+			blockGroup = new ArrayList<>();
+			BLOCK_GROUPS.put(group, blockGroup);
+		}
+		blockGroup.add(result);
+		Registry.register(Registry.BLOCK, new Identifier("engination", name), result);
+		
+		Item.Settings itemSettings = new Item.Settings();
+		itemSettings.itemGroup(ItemGroup.DECORATIONS);
+		BlockItem item = new BlockItem(result, itemSettings);
+		Registry.register(Registry.ITEM, new Identifier("engination", name), item);
+		
+		return result;
+	}
+	
+	public static CosmeticBlock lamp(String name, Material material, DyeColor color, String group) {
+		FabricBlockSettings settings = FabricBlockSettings.of(material).materialColor(color).strength(1f, 15f).lightLevel(15);
+		
+		CosmeticBlock result = new CosmeticBlock(settings.build(), group);
 		List<Block> blockGroup = BLOCK_GROUPS.get(group);
 		if (blockGroup==null) {
 			blockGroup = new ArrayList<>();

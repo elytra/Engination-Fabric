@@ -52,6 +52,11 @@ public class CosmeticBlock extends Block {
 				);
 	}
 	
+	public CosmeticBlock(Settings settings, String group) {
+		super(settings);
+		this.group = group;
+	}
+	
 	@Override
 	public void addInformation(ItemStack var1, BlockView var2, List<TextComponent> var3, TooltipOptions var4) {
 		if (group!=null) {
