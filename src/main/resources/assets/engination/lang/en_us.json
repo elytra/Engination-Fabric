@@ -57,5 +57,20 @@
 	"block.engination.tourian_fall_through"  : "Tourian - Fall-Through",
 	"block.engination.tourian_pedestal"      : "Tourian - Pedestal",
 	"block.engination.tourian_interface"     : "Tourian - Interface",
-	"block.engination.tourian_pillar"        : "Tourian - Pillar"
+	"block.engination.tourian_pillar"        : "Tourian - Pillar",
+	
+	"blockgroup.engination.wooden.tip"            : "Pieces of broken houses shipped straight from Figaro",
+	"block.engination.wooden_crate"               : "Wooden - Crate",
+	"block.engination.wooden_wattle"              : "Wooden - Wattle and Daub",
+	"block.engination.wooden_horizontal_wattle"   : "Wooden - Horizontal Wattle and Daub",
+	"block.engination.wooden_small_square_wattle" : "Wooden - Small-Square Wattle and Daub",
+	"block.engination.wooden_eave_wattle"         : "Wooden - Eave Wattle and Daub",
+	"block.engination.wooden_brace_wattle"        : "Wooden - Brace Wattle and Daub",
+	"block.engination.wooden_port_wattle"         : "Wooden - Port Wattle and Daub",
+	"block.engination.wooden_star_brace_wattle"   : "Wooden - Star Brace Wattle and Daub",
+	"block.engination.wooden_mini_window"         : "Wooden - Mini Window",
+	"block.engination.wooden_laminated"           : "Wooden - Laminated",
+	"block.engination.wooden_lofi"                : "Wooden - Lo-Fi",
+	"block.engination.wooden_lofi_panel"          : "Wooden - Lo-Fi Panel",
+	"block.engination.wooden_polished"            : "Wooden - Polished"
 }

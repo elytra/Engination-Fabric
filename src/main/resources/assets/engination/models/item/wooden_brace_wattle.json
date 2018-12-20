@@ -1,0 +1,8 @@
+{
+	"parent": "block/cube_column",
+	"textures": {
+		"side": "engination:blocks/cosmetic/wooden/brace_wattle",
+		"end" : "engination:blocks/cosmetic/wooden/small_square_wattle",
+		"particle" : "engination:blocks/cosmetic/wooden/small_square_wattle"
+	}
+}

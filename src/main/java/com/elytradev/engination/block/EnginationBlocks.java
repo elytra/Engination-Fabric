@@ -70,6 +70,20 @@ public class EnginationBlocks {
 		block("tourian_pedestal",          Material.METAL, DyeColor.LIGHT_GRAY, "tourian");
 		block("tourian_interface",         Material.METAL, DyeColor.PURPLE,     "tourian");
 		pillar("tourian_pillar",           Material.METAL, DyeColor.LIGHT_GRAY, "tourian");
+		
+		block("wooden_crate",              Material.WOOD, DyeColor.BROWN, "wooden");
+		block("wooden_wattle",             Material.WOOD, DyeColor.BROWN, "wooden");
+		block("wooden_horizontal_wattle",  Material.WOOD, DyeColor.BROWN, "wooden");
+		block("wooden_small_square_wattle",Material.WOOD, DyeColor.BROWN, "wooden");
+		block("wooden_eave_wattle",        Material.WOOD, DyeColor.BROWN, "wooden");
+		block("wooden_brace_wattle",       Material.WOOD, DyeColor.BROWN, "wooden");
+		block("wooden_port_wattle",        Material.WOOD, DyeColor.BROWN, "wooden");
+		block("wooden_star_brace_wattle",  Material.WOOD, DyeColor.BROWN, "wooden");
+		block("wooden_mini_window",        Material.WOOD, DyeColor.BROWN, "wooden");
+		block("wooden_laminated",          Material.WOOD, DyeColor.BROWN, "wooden");
+		block("wooden_lofi",               Material.WOOD, DyeColor.BROWN, "wooden");
+		block("wooden_lofi_panel",         Material.WOOD, DyeColor.BROWN, "wooden");
+		block("wooden_polished",           Material.WOOD, DyeColor.BROWN, "wooden");
 	}
 	
 	

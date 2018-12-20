@@ -1,0 +1,8 @@
+{
+	"parent": "block/cube_column",
+	"textures": {
+		"side": "engination:blocks/cosmetic/wooden/mini_window",
+		"end" : "engination:blocks/cosmetic/gestahl/shadowed",
+		"particle" : "engination:blocks/cosmetic/wooden/mini_window"
+	}
+}
