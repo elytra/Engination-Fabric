@@ -1,0 +1,7 @@
+{
+	"parent": "engination:item/conveyor_base",
+	"textures": {
+		"belt_top": "engination:blocks/conveyor",
+		"side"  : "engination:blocks/conveyor_side"
+	}
+}

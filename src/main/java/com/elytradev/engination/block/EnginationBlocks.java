@@ -155,6 +155,12 @@ public class EnginationBlocks {
 		blocks("presidential", Material.METAL, DyeColor.YELLOW,
 				"large_tile", "tiles", "dots", "grate", "embossed", "brick", "panel", "t"
 				);
+		
+		
+		
+		block("conveyor", "conveyor",            new ConveyorBlock(2.0), ItemGroup.TRANSPORTATION);
+		block("conveyor", "fast_conveyor",       new ConveyorBlock(4.0), ItemGroup.TRANSPORTATION);
+		block("conveyor", "ultra_fast_conveyor", new ConveyorBlock(8.0), ItemGroup.TRANSPORTATION);
 	}
 	
 	
@@ -168,6 +174,24 @@ public class EnginationBlocks {
 		for(String variety : varieties) {
 			lamp(group+"_"+variety, material, color, group);
 		}
+	}
+	
+	public static Block block(String group, String name, Block block, ItemGroup itemGroup) {
+		List<Block> blockGroup = BLOCK_GROUPS.get(group);
+		if (blockGroup==null) {
+			blockGroup = new ArrayList<>();
+			BLOCK_GROUPS.put(group, blockGroup);
+		}
+		blockGroup.add(block);
+		
+		Registry.register(Registry.BLOCK, new Identifier("engination", name), block);
+		
+		Item.Settings itemSettings = new Item.Settings();
+		if (itemGroup!=null) itemSettings.itemGroup(itemGroup);
+		BlockItem item = new BlockItem(block, itemSettings);
+		Registry.register(Registry.ITEM, new Identifier("engination", name), item);
+		
+		return block;
 	}
 	
 	public static CosmeticBlock block(String name, Material material, DyeColor color, String group) {
