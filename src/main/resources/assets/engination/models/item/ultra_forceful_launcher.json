@@ -1,0 +1,8 @@
+{
+	"parent": "block/cube_column",
+	"textures": {
+		"side": "engination:blocks/launcher_side",
+		"end" : "engination:blocks/ultra_forceful_launcher",
+		"particle": "engination:blocks/launcher_side"
+	}
+}

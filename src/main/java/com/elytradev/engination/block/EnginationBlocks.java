@@ -156,11 +156,15 @@ public class EnginationBlocks {
 				"large_tile", "tiles", "dots", "grate", "embossed", "brick", "panel", "t"
 				);
 		
+		block("conveyor", "conveyor",                new ConveyorBlock(2.0), ItemGroup.TRANSPORTATION);
+		block("conveyor", "fast_conveyor",           new ConveyorBlock(4.0), ItemGroup.TRANSPORTATION);
+		block("conveyor", "ultra_fast_conveyor",     new ConveyorBlock(8.0), ItemGroup.TRANSPORTATION);
 		
+		block("launcher", "launcher",                new LauncherBlock(2.0), ItemGroup.TRANSPORTATION);
+		block("launcher", "forceful_launcher",       new LauncherBlock(3.0), ItemGroup.TRANSPORTATION);
+		block("launcher", "ultra_forceful_launcher", new LauncherBlock(5.0), ItemGroup.TRANSPORTATION);
 		
-		block("conveyor", "conveyor",            new ConveyorBlock(2.0), ItemGroup.TRANSPORTATION);
-		block("conveyor", "fast_conveyor",       new ConveyorBlock(4.0), ItemGroup.TRANSPORTATION);
-		block("conveyor", "ultra_fast_conveyor", new ConveyorBlock(8.0), ItemGroup.TRANSPORTATION);
+		block("landingpad", "landing_pad",           new LandingPadBlock(),  ItemGroup.TRANSPORTATION);
 	}
 	
 	

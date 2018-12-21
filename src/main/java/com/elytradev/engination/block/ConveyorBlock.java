@@ -3,10 +3,9 @@ package com.elytradev.engination.block;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.state.StateFactory.Builder;
+import net.minecraft.state.StateFactory;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.DyeColor;
@@ -18,17 +17,17 @@ import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.math.Vec3i;
 import net.minecraft.world.World;
 
-public class ConveyorBlock extends Block {
-	private static DirectionProperty FACING = Properties.FACING_HORIZONTAL;
-	private double force = 1.0;
+public class ConveyorBlock extends PressureTriggeredBlock {
+	public static DirectionProperty FACING = Properties.FACING_HORIZONTAL;
+	protected double force = 2.0;
 	
 	protected ConveyorBlock(double force) {
-		super(Settings.of(Material.METAL, DyeColor.WHITE));
+		super(Settings.of(Material.METAL, DyeColor.WHITE).strength(1, 15));
 		this.force = force;
 	}
 	
 	@Override
-	protected void appendProperties(Builder<Block, BlockState> var1) {
+	protected void appendProperties(StateFactory.Builder<Block, BlockState> var1) {
 		var1.with(FACING);
 	}
 	
@@ -47,34 +46,9 @@ public class ConveyorBlock extends Block {
 		return state.applyRotation(mirror.getRotation(state.get(FACING)));
 	}
 	
-	//@Override
-	//public void onEntityLand(BlockView view, Entity var2) {
-		//if (!entity instanceof PlayerEntity) {
-			//shoot(entity, view.)
-		//}
-		//System.out.println("ON_ENTITY_LAND");
-		//super.onEntityLand(view, var2);
-	//}
-	
 	@Override
-	public void onLandedUpon(World world, BlockPos pos, Entity entity, float var4) {
-		if (entity instanceof PlayerEntity) {
-			if (world.isClient()) shoot(entity, world.getBlockState(pos).get(FACING));
-		} else {
-			if (!world.isClient()) shoot(entity, world.getBlockState(pos).get(FACING));
-		}
-	}
-	
-	@Override
-	public void onSteppedOn(World world, BlockPos pos, Entity entity) {
-		if (entity instanceof PlayerEntity) {
-			if (world.isClient()) shoot(entity, world.getBlockState(pos).get(FACING));
-		} else {
-			if (!world.isClient()) shoot(entity, world.getBlockState(pos).get(FACING));
-		}
-	}
-	
-	private void shoot(Entity entity, Direction facing) {
+	public void trigger(World world, BlockPos pos, LivingEntity entity) {
+		Direction facing = world.getBlockState(pos).get(FACING);
 		Vec3i vec = facing.getVector();
 		Vec3d motion = new Vec3d(vec.getX()*force, vec.getY()*force, vec.getZ()*force);
 		

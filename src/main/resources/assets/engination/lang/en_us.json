@@ -37,8 +37,8 @@
 	"block.engination.oneup_lime_seastone"       : "1Up - Lime Seastone",
 	"block.engination.oneup_castle_brick"        : "1Up - Castle Brick",
 	"block.engination.oneup_bevel"               : "1Up - Bevel",
-	"block.engination.oneup_uneven_gray_bricks"  : "1Up - Uneven Gray Bricks",
-	"block.engination.oneup_uneven_orange_bricks": "1Up - Uneven Orange Bricks",
+	"block.engination.oneup_uneven_gray_brick"   : "1Up - Uneven Gray Bricks",
+	"block.engination.oneup_uneven_orange_brick" : "1Up - Uneven Orange Bricks",
 	
 	"blockgroup.engination.tourian"          : "Tourian",
 	"blockgroup.engination.tourian.tip"      : "Brainy tech for discerning space pirates",
@@ -153,7 +153,7 @@
 	"block.engination.dolomite_dark_hexagons"    : "Dolomite - Dark Hexagons",
 	"block.engination.dolomite_dark_prism"       : "Dolomite - Dark Prism",
 	"block.engination.dolomite_checker"          : "Dolomite - Checkers",
-	"block.engination.dolomite_small_cheker"     : "Dolomite - Small Checkers",
+	"block.engination.dolomite_small_checker"    : "Dolomite - Small Checkers",
 	
 	"blockgroup.engination.celestite"             : "Celestite",
 	"blockgroup.engination.celestite.tip"         : "Too heavy for the Aether, so it fell down here.",
@@ -210,7 +210,7 @@
 	"block.engination.lamp_blue"            : "Crystal Lamp - Blue",
 	
 	"blockgroup.engination.carmine"       : "Carmine",
-	"blockgroup.engination.carmine.tip"   : "Take back your poor compassion - / Joy was a flame in me / Too steady to destroy.",
+	"blockgroup.engination.carmine.tip"   : "Take back your poor compassion -\nJoy was a flame in me\nToo steady to destroy.\n  --Sara Teasdale",
 	"__comment.blockgroup.carmine"        : "--Sara Teasdale",
 	"block.engination.carmine_brick"      : "Carmine - Brick",
 	"block.engination.carmine_smooth"     : "Carmine - Smooth",
@@ -244,5 +244,13 @@
 	"block.engination.presidential_embossed"    : "Presidential - Embossed",
 	"block.engination.presidential_brick"       : "Presidential - Wall Brick",
 	"block.engination.presidential_panel"       : "Presidential - Panel",
-	"block.engination.presidential_t"        : "Presidential - T"
+	"block.engination.presidential_t"           : "Presidential - T",
+	
+	"block.engination.conveyor"                : "Conveyor",
+	"block.engination.fast_conveyor"           : "Fast Conveyor",
+	"block.engination.ultra_fast_conveyor"     : "Ultra-Fast Conveyor",
+	"block.engination.launcher"                : "Launcher",
+	"block.engination.forceful_launcher"       : "Forceful Launcher",
+	"block.engination.ultra_forceful_launcher" : "Ultra-Forceful Launcher",
+	"block.engination.landing_pad"             : "Landing Pad"
 }
