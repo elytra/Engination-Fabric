@@ -2,7 +2,8 @@
   "required": true,
   "package": "com.elytradev.engination.mixin",
   "compatibilityLevel": "JAVA_8",
-  "mixins": [],
+  "mixins": [
+  ],
   "injectors": {
     "defaultRequire": 1
   }
