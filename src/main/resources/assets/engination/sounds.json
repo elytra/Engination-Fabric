@@ -1,0 +1,26 @@
+{
+	"engination:projectile_throw": {
+		"category": "player",
+		"sounds": [
+			"projectile_throw"
+		],
+		"subtitle": "subtitles.engination.projectile_throw"
+	},
+	"engination:squish": {
+		"category": "player",
+		"sounds": [
+			"engination:squish_1",
+			"engination:squish_2",
+			"engination:squish_3",
+			"engination:squish_4"
+		],
+		"subtitle": "subtitles.engination.squish"
+	},
+	"engination:launcher_activate": {
+		"category": "block",
+		"sounds": [
+			"engination/jump"
+		],
+		"subtitle": "subtitles.engination.launcher_activate"
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"disappeared=true": {
+			"model": "engination:item/disappearing_gone"
+		},
+		"disappeared=false": {
+			"model": "engination:item/disappearing_stone_sword"
+		}
+	}
+}

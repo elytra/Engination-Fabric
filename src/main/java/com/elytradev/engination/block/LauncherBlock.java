@@ -1,8 +1,11 @@
 package com.elytradev.engination.block;
 
+import com.elytradev.engination.Engination;
+
 import net.minecraft.block.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -14,31 +17,6 @@ public class LauncherBlock extends PressureTriggeredBlock {
 		super(Settings.of(Material.METAL, DyeColor.WHITE).strength(1, 15));
 		this.force = force;
 	}
-	/*
-	@Override
-	public List<ItemStack> getDroppedStacks(BlockState var1, LootContext.Builder var2) {
-		ArrayList<ItemStack> result = new ArrayList<>();
-		result.add(new ItemStack(this, 1));
-		return result;
-	}
-	
-	@Override
-	public void onLandedUpon(World world, BlockPos pos, Entity entity, float var4) {
-		if (entity instanceof PlayerEntity) {
-			if (world.isClient()) launch(entity, world);
-		} else {
-			if (!world.isClient()) launch(entity, world);
-		}
-	}
-	
-	@Override
-	public void onSteppedOn(World world, BlockPos pos, Entity entity) {
-		if (entity instanceof PlayerEntity) {
-			if (world.isClient()) launch(entity, world);
-		} else {
-			if (!world.isClient()) launch(entity, world);
-		}
-	}*/
 	
 	@Override
 	public void onLandedUpon(World world, BlockPos pos, Entity entity, float var4) {
@@ -53,6 +31,7 @@ public class LauncherBlock extends PressureTriggeredBlock {
 			entity.velocityY = newY;
 			//TODO: Register the mario jump sound
 			//world.playSound(entity.x, entity.y, entity.z, Engination.SOUND_LAUNCH, net.minecraft.sound.SoundCategory.PLAYER, 0.5F, world.getRandom().nextFloat() * 0.4F + 1.0F);
+			world.playSound(entity.x, entity.y, entity.z, Engination.SOUND_JUMP, SoundCategory.PLAYER, 0.5f, world.getRandom().nextFloat() * 0.4F + 1.0F, true);
 		}
 	}
 	

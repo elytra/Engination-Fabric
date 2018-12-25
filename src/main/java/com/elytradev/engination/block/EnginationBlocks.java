@@ -10,6 +10,8 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Material;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.item.block.BlockItem;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
@@ -165,6 +167,17 @@ public class EnginationBlocks {
 		block("launcher", "ultra_forceful_launcher", new LauncherBlock(5.0), ItemGroup.TRANSPORTATION);
 		
 		block("landingpad", "landing_pad",           new LandingPadBlock(),  ItemGroup.TRANSPORTATION);
+		
+		block("disappearing", "disappearing_melee",  new MeleeDisappearingBlock(), ItemGroup.MISC);
+		block("disappearing", "disappearing_wooden_sword", new HeldItemDisappearingBlock(new ItemStack(Items.WOODEN_SWORD)), ItemGroup.MISC);
+		block("disappearing", "disappearing_stone_sword", new HeldItemDisappearingBlock(new ItemStack(Items.STONE_SWORD)), ItemGroup.MISC);
+		block("disappearing", "disappearing_iron_sword", new HeldItemDisappearingBlock(new ItemStack(Items.IRON_SWORD)), ItemGroup.MISC);
+		block("disappearing", "disappearing_gold_sword", new HeldItemDisappearingBlock(new ItemStack(Items.GOLDEN_SWORD)), ItemGroup.MISC);
+		block("disappearing", "disappearing_diamond_sword", new HeldItemDisappearingBlock(new ItemStack(Items.DIAMOND_SWORD)), ItemGroup.MISC);
+		
+		block("disappearing", "disappearing_sprint_speed", new SprintDisappearingBlock(), ItemGroup.MISC);
+		block("disappearing", "disappearing_mount_speed", new MountDisappearingBlock(true), ItemGroup.MISC);
+		block("disappearing", "disappearing_cart_speed", new MountDisappearingBlock(false), ItemGroup.MISC);
 	}
 	
 	

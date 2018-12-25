@@ -1,4 +1,8 @@
 {
+	"subtitles.engination.projectile_throw"   : "Tomato flies",
+	"subtitles.engination.squish"             : "Tomato squishes",
+	"subtitles.engination.launcher_activate"  : "Launcher launches",
+	
 	"blockgroup.engination.gestahl"        : "Gestahl",
 	"blockgroup.engination.gestahl.tip"    : "Cold comfort for remorseful emperors",
 	"block.engination.gestahl_treads"         : "Gestahl - Treads",
@@ -252,5 +256,17 @@
 	"block.engination.launcher"                : "Launcher",
 	"block.engination.forceful_launcher"       : "Forceful Launcher",
 	"block.engination.ultra_forceful_launcher" : "Ultra-Forceful Launcher",
-	"block.engination.landing_pad"             : "Landing Pad"
+	"block.engination.landing_pad"             : "Landing Pad",
+	
+	"block.engination.disappearing_melee"        : "Disappearing Block - Fists",
+	"block.engination.disappearing_wooden_sword" : "Disappearing Block - Wooden Sword",
+	"block.engination.disappearing_stone_sword"  : "Disappearing Block - Stone Sword",
+	"block.engination.disappearing_iron_sword"   : "Disappearing Block - Iron Sword",
+	"block.engination.disappearing_gold_sword"   : "Disappearing Block - Gold Sword",
+	"block.engination.disappearing_diamond_sword": "Disappearing Block - Diamond Sword",
+	
+	"block.engination.disappearing_sprint_speed" : "Speed Block - Sprinting",
+	"block.engination.disappearing_mount_speed"  : "Speed Block - Equestrian",
+	"block.engination.disappearing_cart_speed"   : "Speed Block - Vehicles"
+	
 }

@@ -121,9 +121,9 @@ public class StringOps {
 					format = 'r'; // Reset format when new color code appears
 					boldMode = false; // Reset special format anyway, so we turn bold mode off
 				}/* else {
-                    width += charWidthGetter.applyAsInt('\u00A7');
-                    width += charWidthGetter.applyAsInt(str.charAt(index));
-                }*/ // Vanilla seems to ignore invalid format code. We follow vanilla's logic.
+				    width += charWidthGetter.applyAsInt('\u00A7');
+				    width += charWidthGetter.applyAsInt(str.charAt(index));
+				}*/ // Vanilla seems to ignore invalid format code. We follow vanilla's logic.
 				continue;
 			} else {
 				// Regular content, add its width to the tracker
