@@ -3,6 +3,7 @@ package com.elytradev.engination.block;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.elytradev.engination.Grouped;
 import com.elytradev.engination.StringOps;
 
 import net.fabricmc.api.EnvType;
@@ -19,7 +20,7 @@ import net.minecraft.util.DyeColor;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.loot.context.LootContext.Builder;
 
-public class CosmeticBlock extends Block {
+public class CosmeticBlock extends Block implements Grouped {
 	protected String group = null;
 	
 	public CosmeticBlock(Material material, DyeColor color, String group) {
@@ -54,9 +55,18 @@ public class CosmeticBlock extends Block {
 	
 	@Override
 	public List<ItemStack> getDroppedStacks(BlockState var1, Builder var2) {
+		List<ItemStack> superStacks = super.getDroppedStacks(var1, var2);
+		if (!superStacks.isEmpty()) return superStacks;
+		
 		ArrayList<ItemStack> result = new ArrayList<>();
 		result.add(new ItemStack(this, 1));
 		return result;
 	}
 	
+	//implements Grouped {
+		@Override
+		public String getGroupId() {
+			return group;
+		}
+	//}
 }

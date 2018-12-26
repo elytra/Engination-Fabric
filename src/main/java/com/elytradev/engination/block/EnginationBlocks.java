@@ -5,6 +5,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import javax.annotation.Nullable;
+import javax.annotation.ParametersAreNonnullByDefault;
+
+import com.elytradev.engination.Grouped;
+import com.elytradev.engination.item.CosmeticBlockItem;
+
 import net.fabricmc.fabric.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
@@ -17,12 +23,12 @@ import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
+@ParametersAreNonnullByDefault
 public class EnginationBlocks {
 	
 	public static Map<String, List<Block>> BLOCK_GROUPS = new HashMap<>();
 	
 	public static void init() {
-		//TODO: ItemGroups (creative tabs)
 		block("oneup_cyan_block",          Material.STONE, DyeColor.CYAN,   "oneup");
 		block("oneup_orange_block",        Material.STONE, DyeColor.ORANGE, "oneup");
 		block("oneup_cyan_brick",          Material.STONE, DyeColor.CYAN,   "oneup");
@@ -178,6 +184,9 @@ public class EnginationBlocks {
 		block("disappearing", "disappearing_sprint_speed", new SprintDisappearingBlock(), ItemGroup.MISC);
 		block("disappearing", "disappearing_mount_speed", new MountDisappearingBlock(true), ItemGroup.MISC);
 		block("disappearing", "disappearing_cart_speed", new MountDisappearingBlock(false), ItemGroup.MISC);
+		
+		block("disappearing", "fall_through", new FallThroughBlock(), ItemGroup.MISC);
+		block("disappearing", "disguised_fall_through", new FallThroughBlock(), ItemGroup.MISC);
 	}
 	
 	
@@ -205,7 +214,7 @@ public class EnginationBlocks {
 		
 		Item.Settings itemSettings = new Item.Settings();
 		if (itemGroup!=null) itemSettings.itemGroup(itemGroup);
-		BlockItem item = new BlockItem(block, itemSettings);
+		BlockItem item = (block instanceof Grouped) ? new CosmeticBlockItem(block, itemSettings) : new BlockItem(block, itemSettings);
 		Registry.register(Registry.ITEM, new Identifier("engination", name), item);
 		
 		return block;
@@ -223,7 +232,8 @@ public class EnginationBlocks {
 		
 		Item.Settings itemSettings = new Item.Settings();
 		itemSettings.itemGroup(ItemGroup.DECORATIONS);
-		BlockItem item = new BlockItem(result, itemSettings);
+		//BlockItem item = new BlockItem(result, itemSettings);
+		BlockItem item = (result instanceof Grouped) ? new CosmeticBlockItem(result, itemSettings) : new BlockItem(result, itemSettings);
 		Registry.register(Registry.ITEM, new Identifier("engination", name), item);
 		
 		return result;
@@ -241,7 +251,8 @@ public class EnginationBlocks {
 		
 		Item.Settings itemSettings = new Item.Settings();
 		itemSettings.itemGroup(ItemGroup.DECORATIONS);
-		BlockItem item = new BlockItem(result, itemSettings);
+		BlockItem item = (result instanceof Grouped) ? new CosmeticBlockItem(result, itemSettings) : new BlockItem(result, itemSettings);
+		//BlockItem item = new BlockItem(result, itemSettings);
 		Registry.register(Registry.ITEM, new Identifier("engination", name), item);
 		
 		return result;
@@ -261,9 +272,30 @@ public class EnginationBlocks {
 		
 		Item.Settings itemSettings = new Item.Settings();
 		itemSettings.itemGroup(ItemGroup.DECORATIONS);
-		BlockItem item = new BlockItem(result, itemSettings);
+		//BlockItem item = new BlockItem(result, itemSettings);
+		BlockItem item = (result instanceof Grouped) ? new CosmeticBlockItem(result, itemSettings) : new BlockItem(result, itemSettings);
 		Registry.register(Registry.ITEM, new Identifier("engination", name), item);
 		
 		return result;
+	}
+	
+	@Nullable
+	public static ItemStack getNextItem(ItemStack stack, String groupId) {
+		if (stack.getItem() instanceof BlockItem) {
+			Block curBlock = ((BlockItem)stack.getItem()).getBlock();
+			
+			List<Block> blockGroup = BLOCK_GROUPS.get(groupId);
+			if (blockGroup==null) return null;
+			for(int i=0; i<blockGroup.size(); i++) {
+				Block b = blockGroup.get(i);
+				if (b==curBlock) {
+					int nextBlock = (i + 1) % blockGroup.size();
+					ItemStack result = new ItemStack(blockGroup.get(nextBlock), stack.getAmount());
+					return result;
+				}
+			}
+		}
+		
+		return null;
 	}
 }

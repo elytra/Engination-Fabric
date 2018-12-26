@@ -1,0 +1,18 @@
+{
+	"type"  : "crafting_shaped",
+	"group" : "engination_oneup",
+	"pattern" : [
+		"SSS",
+		"SmS",
+		"SSS"
+	],
+	"key": {
+		"S": { "item": "minecraft:stone" },
+		"m": { "tag": "fabric:mushrooms" }
+	},
+	"result": {
+		"count" : 8,
+		"item": "engination:oneup_cyan_block"
+	}
+
+} 

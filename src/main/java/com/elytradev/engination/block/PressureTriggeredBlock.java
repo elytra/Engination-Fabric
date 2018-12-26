@@ -21,6 +21,9 @@ public abstract class PressureTriggeredBlock extends Block {
 	
 	@Override
 	public List<ItemStack> getDroppedStacks(BlockState var1, LootContext.Builder var2) {
+		List<ItemStack> superStacks = super.getDroppedStacks(var1, var2);
+		if (!superStacks.isEmpty()) return superStacks;
+		
 		ArrayList<ItemStack> result = new ArrayList<>();
 		result.add(new ItemStack(this, 1));
 		return result;

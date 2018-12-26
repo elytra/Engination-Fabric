@@ -54,6 +54,9 @@ public abstract class DisappearingBlock extends Block {
 	
 	@Override
 	public List<ItemStack> getDroppedStacks(BlockState var1, LootContext.Builder var2) {
+		List<ItemStack> superStacks = super.getDroppedStacks(var1, var2);
+		if (!superStacks.isEmpty()) return superStacks;
+		
 		List<ItemStack> result = new ArrayList<>();
 		result.add(new ItemStack(this));
 		return result;

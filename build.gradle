@@ -19,4 +19,6 @@ dependencies {
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
 	modCompile "net.fabricmc:fabric:0.1.1.47"
+	
+	modCompile "com.google.code.findbugs:jsr305:3.0.2"
 }
