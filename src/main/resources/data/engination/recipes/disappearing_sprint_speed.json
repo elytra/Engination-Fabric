@@ -1,0 +1,18 @@
+{
+	"type"  : "crafting_shaped",
+	"group" : "engination_speed",
+	"pattern" : [
+		"SSS",
+		"SfS",
+		"S S"
+	],
+	"key": {
+		"S": { "item": "stone" },
+		"f": { "item": "feather" }
+	},
+	"result": {
+		"count" : 9,
+		"item": "engination:disappearing_sprint_speed"
+	}
+
+} 

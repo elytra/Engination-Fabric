@@ -1,0 +1,18 @@
+{
+	"type"  : "crafting_shaped",
+	"group" : "engination_landing_pad",
+	"pattern" : [
+		"SWS",
+		"SWS",
+		"SSS"
+	],
+	"key": {
+		"S": { "item": "stone" },
+		"W": { "tag": "wool" }
+	},
+	"result": {
+		"count" : 6,
+		"item": "engination:landing_pad"
+	}
+
+} 

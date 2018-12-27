@@ -1,0 +1,18 @@
+{
+	"type"  : "crafting_shaped",
+	"group" : "engination_carmine",
+	"pattern" : [
+		"SGS",
+		"GrG",
+		"SGS"
+	],
+	"key": {
+		"G": { "item": "granite" },
+		"r": { "item": "red_dye"},
+		"S": { "item": "stone"}
+	},
+	"result": {
+		"count" : 16,
+		"item": "engination:carmine_brick"
+	}
+} 

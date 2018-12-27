@@ -1,0 +1,17 @@
+{
+	"type"  : "crafting_shaped",
+	"group" : "engination_lamp",
+	"pattern" : [
+		"SgS",
+		"g g",
+		"SgS"
+	],
+	"key": {
+		"g": { "item": "glowstone_dust" },
+		"S": { "item": "stone"}
+	},
+	"result": {
+		"count" : 1,
+		"item": "engination:lamp_golbez"
+	}
+} 

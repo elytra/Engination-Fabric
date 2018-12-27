@@ -1,0 +1,19 @@
+{
+	"type"  : "crafting_shaped",
+	"group" : "engination_disappearing_sword",
+	"pattern" : [
+		"SSS",
+		"SbS",
+		"SqS"
+	],
+	"key": {
+		"S": { "item": "stone" },
+		"b": { "tag": "buttons" },
+		"q": { "item": "wooden_sword" }
+	},
+	"result": {
+		"count" : 9,
+		"item": "engination:disappearing_wooden_sword"
+	}
+
+} 

@@ -1,0 +1,16 @@
+{
+	"type"  : "crafting_shaped",
+	"group" : "engination_forceful_launcher",
+	"pattern" : [
+		"LL",
+		"LL"
+	],
+	"key": {
+		"L": { "item": "engination:launcher"}
+	},
+	"result": {
+		"count" : 1,
+		"item": "engination:forceful_launcher"
+	}
+
+} 

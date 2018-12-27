@@ -1,0 +1,18 @@
+{
+	"type"  : "crafting_shaped",
+	"group" : "engination_celestite",
+	"pattern" : [
+		"GSG",
+		"ScS",
+		"GSG"
+	],
+	"key": {
+		"G": { "item": "glass" },
+		"c": { "item": "cyan_dye"},
+		"S": { "item": "stone"}
+	},
+	"result": {
+		"count" : 16,
+		"item": "engination:celestite_brick"
+	}
+} 

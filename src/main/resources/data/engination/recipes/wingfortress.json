@@ -1,0 +1,17 @@
+{
+	"type"  : "crafting_shaped",
+	"group" : "engination_wingfortress",
+	"pattern" : [
+		"SiS",
+		"iii",
+		"SiS"
+	],
+	"key": {
+		"S": { "item": "stone" },
+		"i": { "item": "iron_ingot" }
+	},
+	"result": {
+		"count" : 24,
+		"item": "engination:wingfortress_orb"
+	}
+} 

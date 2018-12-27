@@ -1,0 +1,13 @@
+{
+	"type"  : "crafting_shapeless",
+	"group" : "engination_disguised_fall_through",
+	"ingredients" : [
+		{ "item": "engination:fall_through" },
+		{ "item": "stone" }
+	],
+	"result": {
+		"count" : 1,
+		"item": "engination:disguised_fall_through"
+	}
+
+} 

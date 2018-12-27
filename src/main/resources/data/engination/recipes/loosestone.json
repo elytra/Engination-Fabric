@@ -1,0 +1,18 @@
+{
+	"type"  : "crafting_shaped",
+	"group" : "engination_loosestone",
+	"pattern" : [
+		"SCS",
+		"C C",
+		"SCS"
+	],
+	"key": {
+		"S": { "item": "cobblestone" },
+		"C": { "item": "stone" }
+	},
+	"result": {
+		"count" : 16,
+		"item": "engination:loosestone_vector"
+	}
+
+} 

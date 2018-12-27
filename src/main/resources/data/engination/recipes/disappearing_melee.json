@@ -1,0 +1,18 @@
+{
+	"type"  : "crafting_shaped",
+	"group" : "engination_disappearing_melee",
+	"pattern" : [
+		"SSS",
+		"SbS",
+		"S S"
+	],
+	"key": {
+		"S": { "item": "stone" },
+		"b": { "tag": "buttons" }
+	},
+	"result": {
+		"count" : 9,
+		"item": "engination:disappearing_melee"
+	}
+
+} 

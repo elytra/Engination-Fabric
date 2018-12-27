@@ -1,0 +1,18 @@
+{
+	"type"  : "crafting_shaped",
+	"group" : "engination_fall_through",
+	"pattern" : [
+		"SGS",
+		"SGS",
+		"SGS"
+	],
+	"key": {
+		"S": { "item": "stone" },
+		"G": { "item": "gravel" }
+	},
+	"result": {
+		"count" : 9,
+		"item": "engination:fall_through"
+	}
+
+} 

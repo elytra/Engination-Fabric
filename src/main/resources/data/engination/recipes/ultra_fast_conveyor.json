@@ -1,0 +1,16 @@
+{
+	"type"  : "crafting_shaped",
+	"group" : "engination_ultra_fast_conveyor",
+	"pattern" : [
+		"CC",
+		"CC"
+	],
+	"key": {
+		"C": { "item": "engination:fast_conveyor" }
+	},
+	"result": {
+		"count" : 1,
+		"item": "engination:ultra_fast_conveyor"
+	}
+
+} 

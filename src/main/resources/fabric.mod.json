@@ -1,10 +1,10 @@
 {
   "id": "engination",
   "name": "Engination Enginogrammetry",
-  "description": "FANCY creative blocks for the Discerning Lazor Enthusiast",
+  "description": "Creative Cubes and Conventional Curiosities",
   "version": "1.0.0",
   "side": "universal",
-  "initializer": "com.elytradev.engination.Engination",
+  "initializers": [ "com.elytradev.engination.Engination", "com.elytradev.engination.EnginationClient" ],
   "requires": {
     "fabric": "*"
   },

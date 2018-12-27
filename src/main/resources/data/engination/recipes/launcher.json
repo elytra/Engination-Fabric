@@ -1,0 +1,19 @@
+{
+	"type"  : "crafting_shaped",
+	"group" : "engination_launcher",
+	"pattern" : [
+		"SPS",
+		"s s",
+		"SSS"
+	],
+	"key": {
+		"S": { "item": "stone" },
+		"s": { "item": "stick" },
+		"P": { "item": "piston"}
+	},
+	"result": {
+		"count" : 8,
+		"item": "engination:launcher"
+	}
+
+} 

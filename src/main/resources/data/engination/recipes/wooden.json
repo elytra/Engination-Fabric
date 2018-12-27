@@ -1,0 +1,18 @@
+{
+	"type"  : "crafting_shaped",
+	"group" : "engination_wooden",
+	"pattern" : [
+		"WWW",
+		"WsW",
+		"WWW"
+	],
+	"key": {
+		"W": { "tag": "planks" },
+		"s": { "item": "stick" }
+	},
+	"result": {
+		"count" : 16,
+		"item": "engination:wooden_crate"
+	}
+
+} 

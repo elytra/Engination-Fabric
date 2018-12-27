@@ -1,0 +1,19 @@
+{
+	"type"  : "crafting_shaped",
+	"group" : "engination_conveyor",
+	"pattern" : [
+		"WWW",
+		"sPs",
+		"WWW"
+	],
+	"key": {
+		"W": { "tag": "wool" },
+		"s": { "item": "stick" },
+		"P": { "item": "piston"}
+	},
+	"result": {
+		"count" : 8,
+		"item": "engination:conveyor"
+	}
+
+} 

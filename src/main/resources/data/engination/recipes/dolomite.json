@@ -1,0 +1,18 @@
+{
+	"type"  : "crafting_shaped",
+	"group" : "engination_dolomite",
+	"pattern" : [
+		"SDS",
+		"DGD",
+		"SDS"
+	],
+	"key": {
+		"S": { "item": "stone" },
+		"D": { "item": "diorite" },
+		"G": { "item": "granite"}
+	},
+	"result": {
+		"count" : 16,
+		"item": "engination:dolomite_brick"
+	}
+} 

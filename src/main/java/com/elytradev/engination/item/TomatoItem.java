@@ -4,6 +4,7 @@ import com.elytradev.engination.Engination;
 import com.elytradev.engination.entity.TomatoEntity;
 
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.thrown.SnowballEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -31,7 +32,9 @@ public class TomatoItem extends Item {
 		
 		world.playSound((PlayerEntity)null, player.x, player.y, player.z, Engination.SOUND_THROW, SoundCategory.NEUTRAL, 0.5F, 0.4F / (random.nextFloat() * 0.4F + 0.8F));
 		if (!world.isClient) {
-			TomatoEntity entity = new TomatoEntity(world, player);
+			SnowballEntity entity = new SnowballEntity(world, player);
+			entity.method_16940(new ItemStack(EnginationItems.TOMATO));
+			//TomatoEntity entity = new TomatoEntity(world, player);
 			
 			//this.getDataTracker().set(field_17082, SystemUtil.consume(itemStack_1.copy(), (itemStack_1x) -> {
 	        //    itemStack_1x.setAmount(1);

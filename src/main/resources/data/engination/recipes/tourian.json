@@ -1,0 +1,19 @@
+{
+	"type"  : "crafting_shaped",
+	"group" : "engination_tourian",
+	"pattern" : [
+		"SiS",
+		"ici",
+		"SiS"
+	],
+	"key": {
+		"S": { "item": "minecraft:stone" },
+		"i": { "item": "iron_ingot" },
+		"c": { "item": "coal" }
+	},
+	"result": {
+		"count" : 24,
+		"item": "engination:tourian_spawner"
+	}
+
+} 

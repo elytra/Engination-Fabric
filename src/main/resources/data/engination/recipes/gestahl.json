@@ -1,18 +1,18 @@
 {
 	"type"  : "crafting_shaped",
-	"group" : "engination_oneup",
+	"group" : "engination_gestahl",
 	"pattern" : [
-		"SSS",
-		"SmS",
-		"SSS"
+		"SiS",
+		"i i",
+		"SiS"
 	],
 	"key": {
 		"S": { "item": "minecraft:stone" },
-		"m": { "tag": "fabric:mushrooms" }
+		"i": { "item": "iron_ingot" }
 	},
 	"result": {
 		"count" : 16,
-		"item": "engination:oneup_cyan_block"
+		"item": "engination:gestahl_treads"
 	}
 
 } 

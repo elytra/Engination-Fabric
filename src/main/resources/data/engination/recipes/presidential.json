@@ -1,0 +1,18 @@
+{
+	"type"  : "crafting_shaped",
+	"group" : "engination_presidential",
+	"pattern" : [
+		"GgG",
+		"geg",
+		"GgG"
+	],
+	"key": {
+		"G": { "item": "gold_block" },
+		"g": { "item": "gold_ingot" },
+		"e": { "item": "emerald"}
+	},
+	"result": {
+		"count" : 1,
+		"item": "engination:presidential_large_tile"
+	}
+} 

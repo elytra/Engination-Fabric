@@ -1,0 +1,18 @@
+{
+	"type"  : "crafting_shaped",
+	"group" : "engination_sanic",
+	"pattern" : [
+		"SiS",
+		"ili",
+		"SiS"
+	],
+	"key": {
+		"S": { "item": "stone" },
+		"i": { "item": "iron_ingot" },
+		"l": { "item": "blue_dye"}
+	},
+	"result": {
+		"count" : 24,
+		"item": "engination:sanic_dark_checker"
+	}
+} 
