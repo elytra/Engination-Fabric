@@ -8,12 +8,12 @@ import java.util.Set;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.fabricmc.fabric.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockRenderLayer;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
-import net.minecraft.client.render.block.BlockRenderLayer;
-import net.minecraft.entity.VerticalEntityPosition;
+import net.minecraft.entity.EntityContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.state.StateFactory;
 import net.minecraft.state.property.BooleanProperty;
@@ -28,7 +28,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.loot.context.LootContext;
 
 public abstract class DisappearingBlock extends Block {
-	public static final BooleanProperty DISAPPEARED = BooleanProperty.create("disappeared");
+	public static final BooleanProperty DISAPPEARED = BooleanProperty.of("disappeared");
 	
 	public static int DELAY_REAPPEAR = 20 * 5;
 	public static int DISAPPEAR_CHAIN_MAX = 16;
@@ -49,7 +49,7 @@ public abstract class DisappearingBlock extends Block {
 	
 	@Override
 	protected void appendProperties(StateFactory.Builder<Block, BlockState> builder) {
-		builder.with(DISAPPEARED);
+		builder.add(DISAPPEARED);
 	}
 	
 	@Override
@@ -67,13 +67,15 @@ public abstract class DisappearingBlock extends Block {
 		return true;
 	}
 	
+	
+	/*
 	@Override
 	public boolean canCollideWith(BlockState state) {
 		return !state.get(DISAPPEARED);
-	}
+	}*/
 	
 	@Override
-	public VoxelShape getCollisionShape(BlockState state, BlockView view, BlockPos pos, VerticalEntityPosition relativePosition) {
+	public VoxelShape getCollisionShape(BlockState state, BlockView view, BlockPos pos, EntityContext relativePosition) {
 		if (state.get(DISAPPEARED)) {
 			return VoxelShapes.empty();
 		} else {
@@ -82,7 +84,7 @@ public abstract class DisappearingBlock extends Block {
 	}
 	
 	@Override
-	public void scheduledTick(BlockState state, World world, BlockPos pos, Random random) {
+	public void onScheduledTick(BlockState state, World world, BlockPos pos, Random random) {
 		
 		world.setBlockState(pos, state.with(DISAPPEARED, false), FLAGS);
 	}
@@ -169,7 +171,7 @@ public abstract class DisappearingBlock extends Block {
 	@Environment(EnvType.CLIENT)
 	@Override
 	public BlockRenderLayer getRenderLayer() {
-		return BlockRenderLayer.MIPPED_CUTOUT;
+		return BlockRenderLayer.CUTOUT_MIPPED;
 	}
 	
 	public abstract ChainReactionType getChainReactionType();

@@ -2,9 +2,9 @@ package com.elytradev.engination.block;
 
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityContext;
 import net.minecraft.entity.JumpingMount;
 import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.VerticalEntityPosition;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.vehicle.AbstractMinecartEntity;
 import net.minecraft.entity.vehicle.BoatEntity;
@@ -53,12 +53,12 @@ public class MountDisappearingBlock extends DisappearingBlock {
 	}
 	
 	@Override
-	public VoxelShape getCollisionShape(BlockState state, BlockView view, BlockPos pos, VerticalEntityPosition relativePosition) {
+	public VoxelShape getCollisionShape(BlockState state, BlockView view, BlockPos pos, EntityContext relativePosition) {
 		if (state.get(DISAPPEARED)) {
 			return VoxelShapes.empty();
 		} else {
 			//return VoxelShapes.cube(0.01, 0.01, 0.01, 0.99, 0.99, 0.99);
-			return VoxelShapes.cube(0.005, 0.005, 0.005, 0.995, 0.995, 0.995);
+			return VoxelShapes.cuboid(0.005, 0.005, 0.005, 0.995, 0.995, 0.995);
 			//return VoxelShapes.fullCube();
 		}
 	}

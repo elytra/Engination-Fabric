@@ -26,12 +26,12 @@ public class LauncherBlock extends PressureTriggeredBlock {
 	
 	@Override
 	public void trigger(World world, BlockPos pos, LivingEntity entity) {
-		double newY = adjustScalar(entity.velocityY, force*0.6);
-		if (newY!=entity.velocityY) {
-			entity.velocityY = newY;
+		double newY = adjustScalar(entity.getVelocity().y, force*0.6);
+		if (newY!=entity.getVelocity().y) {
+			entity.setVelocity(entity.getVelocity().x, newY, entity.getVelocity().z);
 			//TODO: Register the mario jump sound
 			//world.playSound(entity.x, entity.y, entity.z, Engination.SOUND_LAUNCH, net.minecraft.sound.SoundCategory.PLAYER, 0.5F, world.getRandom().nextFloat() * 0.4F + 1.0F);
-			world.playSound(entity.x, entity.y, entity.z, Engination.SOUND_JUMP, SoundCategory.PLAYER, 0.5f, world.getRandom().nextFloat() * 0.4F + 1.0F, true);
+			world.playSound(entity.x, entity.y, entity.z, Engination.SOUND_JUMP, SoundCategory.PLAYERS, 0.5f, world.getRandom().nextFloat() * 0.4F + 1.0F, true);
 		}
 	}
 	

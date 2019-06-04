@@ -8,17 +8,18 @@ import java.util.Map;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 
+import com.elytradev.engination.Engination;
 import com.elytradev.engination.Grouped;
 import com.elytradev.engination.item.CosmeticBlockItem;
 
-import net.fabricmc.fabric.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Material;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
-import net.minecraft.item.block.BlockItem;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -164,29 +165,29 @@ public class EnginationBlocks {
 				"large_tile", "tiles", "dots", "grate", "embossed", "brick", "panel", "t"
 				);
 		
-		block("conveyor", "conveyor",                new ConveyorBlock(2.0), ItemGroup.TRANSPORTATION);
-		block("conveyor", "fast_conveyor",           new ConveyorBlock(4.0), ItemGroup.TRANSPORTATION);
-		block("conveyor", "ultra_fast_conveyor",     new ConveyorBlock(8.0), ItemGroup.TRANSPORTATION);
+		block("conveyor", "conveyor",                new ConveyorBlock(2.0), Engination.ENGINATION_GADGETS);
+		block("conveyor", "fast_conveyor",           new ConveyorBlock(4.0), Engination.ENGINATION_GADGETS);
+		block("conveyor", "ultra_fast_conveyor",     new ConveyorBlock(8.0), Engination.ENGINATION_GADGETS);
 		
-		block("launcher", "launcher",                new LauncherBlock(2.0), ItemGroup.TRANSPORTATION);
-		block("launcher", "forceful_launcher",       new LauncherBlock(3.0), ItemGroup.TRANSPORTATION);
-		block("launcher", "ultra_forceful_launcher", new LauncherBlock(5.0), ItemGroup.TRANSPORTATION);
+		block("launcher", "launcher",                new LauncherBlock(2.0), Engination.ENGINATION_GADGETS);
+		block("launcher", "forceful_launcher",       new LauncherBlock(3.0), Engination.ENGINATION_GADGETS);
+		block("launcher", "ultra_forceful_launcher", new LauncherBlock(5.0), Engination.ENGINATION_GADGETS);
 		
-		block("landingpad", "landing_pad",           new LandingPadBlock(),  ItemGroup.TRANSPORTATION);
+		block("landingpad", "landing_pad",           new LandingPadBlock(),  Engination.ENGINATION_GADGETS);
 		
-		block("disappearing", "disappearing_melee",  new MeleeDisappearingBlock(), ItemGroup.MISC);
-		block("disappearing", "disappearing_wooden_sword", new HeldItemDisappearingBlock(new ItemStack(Items.WOODEN_SWORD)), ItemGroup.MISC);
-		block("disappearing", "disappearing_stone_sword", new HeldItemDisappearingBlock(new ItemStack(Items.STONE_SWORD)), ItemGroup.MISC);
-		block("disappearing", "disappearing_iron_sword", new HeldItemDisappearingBlock(new ItemStack(Items.IRON_SWORD)), ItemGroup.MISC);
-		block("disappearing", "disappearing_gold_sword", new HeldItemDisappearingBlock(new ItemStack(Items.GOLDEN_SWORD)), ItemGroup.MISC);
-		block("disappearing", "disappearing_diamond_sword", new HeldItemDisappearingBlock(new ItemStack(Items.DIAMOND_SWORD)), ItemGroup.MISC);
+		block("disappearing", "disappearing_melee",  new MeleeDisappearingBlock(), Engination.ENGINATION_GADGETS);
+		block("disappearing", "disappearing_wooden_sword", new HeldItemDisappearingBlock(new ItemStack(Items.WOODEN_SWORD)), Engination.ENGINATION_GADGETS);
+		block("disappearing", "disappearing_stone_sword", new HeldItemDisappearingBlock(new ItemStack(Items.STONE_SWORD)), Engination.ENGINATION_GADGETS);
+		block("disappearing", "disappearing_iron_sword", new HeldItemDisappearingBlock(new ItemStack(Items.IRON_SWORD)), Engination.ENGINATION_GADGETS);
+		block("disappearing", "disappearing_gold_sword", new HeldItemDisappearingBlock(new ItemStack(Items.GOLDEN_SWORD)), Engination.ENGINATION_GADGETS);
+		block("disappearing", "disappearing_diamond_sword", new HeldItemDisappearingBlock(new ItemStack(Items.DIAMOND_SWORD)), Engination.ENGINATION_GADGETS);
 		
-		block("disappearing", "disappearing_sprint_speed", new SprintDisappearingBlock(), ItemGroup.MISC);
-		block("disappearing", "disappearing_mount_speed", new MountDisappearingBlock(true), ItemGroup.MISC);
-		block("disappearing", "disappearing_cart_speed", new MountDisappearingBlock(false), ItemGroup.MISC);
+		block("disappearing", "disappearing_sprint_speed", new SprintDisappearingBlock(), Engination.ENGINATION_GADGETS);
+		block("disappearing", "disappearing_mount_speed", new MountDisappearingBlock(true), Engination.ENGINATION_GADGETS);
+		block("disappearing", "disappearing_cart_speed", new MountDisappearingBlock(false), Engination.ENGINATION_GADGETS);
 		
-		block("disappearing", "fall_through", new FallThroughBlock(), ItemGroup.MISC);
-		block("disappearing", "disguised_fall_through", new FallThroughBlock(), ItemGroup.MISC);
+		block("disappearing", "fall_through", new FallThroughBlock(), Engination.ENGINATION_GADGETS);
+		block("disappearing", "disguised_fall_through", new FallThroughBlock(), Engination.ENGINATION_GADGETS);
 	}
 	
 	
@@ -212,8 +213,8 @@ public class EnginationBlocks {
 		
 		Registry.register(Registry.BLOCK, new Identifier("engination", name), block);
 		
-		Item.Settings itemSettings = new Item.Settings();
-		if (itemGroup!=null) itemSettings.itemGroup(itemGroup);
+		Item.Settings itemSettings = new Item.Settings().group(Engination.ENGINATION_COSMETIC);
+		if (itemGroup!=null) itemSettings.group(itemGroup);
 		BlockItem item = (block instanceof Grouped) ? new CosmeticBlockItem(block, itemSettings) : new BlockItem(block, itemSettings);
 		Registry.register(Registry.ITEM, new Identifier("engination", name), item);
 		
@@ -230,8 +231,8 @@ public class EnginationBlocks {
 		blockGroup.add(result);
 		Registry.register(Registry.BLOCK, new Identifier("engination", name), result);
 		
-		Item.Settings itemSettings = new Item.Settings();
-		itemSettings.itemGroup(ItemGroup.DECORATIONS);
+		Item.Settings itemSettings = new Item.Settings().group(Engination.ENGINATION_COSMETIC);;
+		itemSettings.group(Engination.ENGINATION_COSMETIC);
 		//BlockItem item = new BlockItem(result, itemSettings);
 		BlockItem item = (result instanceof Grouped) ? new CosmeticBlockItem(result, itemSettings) : new BlockItem(result, itemSettings);
 		Registry.register(Registry.ITEM, new Identifier("engination", name), item);
@@ -249,8 +250,8 @@ public class EnginationBlocks {
 		blockGroup.add(result);
 		Registry.register(Registry.BLOCK, new Identifier("engination", name), result);
 		
-		Item.Settings itemSettings = new Item.Settings();
-		itemSettings.itemGroup(ItemGroup.DECORATIONS);
+		Item.Settings itemSettings = new Item.Settings().group(Engination.ENGINATION_COSMETIC);;
+		itemSettings.group(Engination.ENGINATION_COSMETIC);
 		BlockItem item = (result instanceof Grouped) ? new CosmeticBlockItem(result, itemSettings) : new BlockItem(result, itemSettings);
 		//BlockItem item = new BlockItem(result, itemSettings);
 		Registry.register(Registry.ITEM, new Identifier("engination", name), item);
@@ -270,8 +271,8 @@ public class EnginationBlocks {
 		blockGroup.add(result);
 		Registry.register(Registry.BLOCK, new Identifier("engination", name), result);
 		
-		Item.Settings itemSettings = new Item.Settings();
-		itemSettings.itemGroup(ItemGroup.DECORATIONS);
+		Item.Settings itemSettings = new Item.Settings().group(Engination.ENGINATION_COSMETIC);;
+		itemSettings.group(Engination.ENGINATION_COSMETIC);
 		//BlockItem item = new BlockItem(result, itemSettings);
 		BlockItem item = (result instanceof Grouped) ? new CosmeticBlockItem(result, itemSettings) : new BlockItem(result, itemSettings);
 		Registry.register(Registry.ITEM, new Identifier("engination", name), item);
@@ -290,7 +291,7 @@ public class EnginationBlocks {
 				Block b = blockGroup.get(i);
 				if (b==curBlock) {
 					int nextBlock = (i + 1) % blockGroup.size();
-					ItemStack result = new ItemStack(blockGroup.get(nextBlock), stack.getAmount());
+					ItemStack result = new ItemStack(blockGroup.get(nextBlock), stack.getCount());
 					return result;
 				}
 			}

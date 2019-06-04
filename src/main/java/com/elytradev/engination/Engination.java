@@ -1,11 +1,12 @@
 package com.elytradev.engination;
 
 import com.elytradev.engination.block.EnginationBlocks;
-import com.elytradev.engination.entity.TomatoEntity;
 import com.elytradev.engination.item.EnginationItems;
 
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.entity.EntityType;
+import net.fabricmc.fabric.api.client.itemgroup.FabricItemGroupBuilder;
+import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
@@ -15,7 +16,10 @@ public class Engination implements ModInitializer {
 	public static SoundEvent SOUND_THROW;
 	public static SoundEvent SOUND_SQUISH;
 	
-	public static EntityType<TomatoEntity> ENTITY_TYPE_TOMATO;
+	public static ItemGroup ENGINATION_COSMETIC = 
+			FabricItemGroupBuilder.build(new Identifier("engination","cosmetic"), ()->new ItemStack(EnginationBlocks.BLOCK_GROUPS.get("tourian").get(0)));
+	public static ItemGroup ENGINATION_GADGETS = 
+			FabricItemGroupBuilder.build(new Identifier("engination","gadgets"), ()->new ItemStack(EnginationBlocks.BLOCK_GROUPS.get("launcher").get(0)));
 	
 	@Override
 	public void onInitialize() {

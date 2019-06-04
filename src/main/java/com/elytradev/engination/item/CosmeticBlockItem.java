@@ -5,14 +5,14 @@ import java.util.List;
 import com.elytradev.engination.Grouped;
 import com.elytradev.engination.block.EnginationBlocks;
 
+import net.minecraft.ChatFormat;
 import net.minecraft.block.Block;
-import net.minecraft.client.item.TooltipOptions;
+import net.minecraft.client.item.TooltipContext;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.block.BlockItem;
-import net.minecraft.text.TextComponent;
-import net.minecraft.text.TextFormat;
-import net.minecraft.text.TranslatableTextComponent;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
@@ -42,8 +42,8 @@ public class CosmeticBlockItem extends BlockItem {
 	}
 	
 	@Override
-	public void buildTooltip(ItemStack itemStack_1, World world_1, List<TextComponent> list, TooltipOptions tooltipOptions_1) {
-		list.add(new TranslatableTextComponent("tip.engination.sneak_use").applyFormat(TextFormat.AQUA));
-		super.buildTooltip(itemStack_1, world_1, list, tooltipOptions_1);
+	public void appendTooltip(ItemStack itemStack_1, World world_1, List<Component> list, TooltipContext tooltipOptions_1) {
+		list.add(new TranslatableComponent("tip.engination.sneak_use").applyFormat(ChatFormat.AQUA));
+		super.appendTooltip(itemStack_1, world_1, list, tooltipOptions_1);
 	}
 }

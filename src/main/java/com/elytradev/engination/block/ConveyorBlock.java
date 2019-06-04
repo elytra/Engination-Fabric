@@ -8,9 +8,9 @@ import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateFactory;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.Properties;
+import net.minecraft.util.BlockMirror;
+import net.minecraft.util.BlockRotation;
 import net.minecraft.util.DyeColor;
-import net.minecraft.util.Mirror;
-import net.minecraft.util.Rotation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec3d;
@@ -18,7 +18,7 @@ import net.minecraft.util.math.Vec3i;
 import net.minecraft.world.World;
 
 public class ConveyorBlock extends PressureTriggeredBlock {
-	public static DirectionProperty FACING = Properties.FACING_HORIZONTAL;
+	public static DirectionProperty FACING = Properties.HORIZONTAL_FACING;
 	protected double force = 2.0;
 	
 	protected ConveyorBlock(double force) {
@@ -28,22 +28,22 @@ public class ConveyorBlock extends PressureTriggeredBlock {
 	
 	@Override
 	protected void appendProperties(StateFactory.Builder<Block, BlockState> var1) {
-		var1.with(FACING);
+		var1.add(FACING);
 	}
 	
 	@Override
 	public BlockState getPlacementState(ItemPlacementContext context) {
-		return this.getDefaultState().with(FACING, context.getPlayerHorizontalFacing());
+		return this.getDefaultState().with(FACING, context.getPlayerFacing());
 	}
 	
 	@Override
-	public BlockState applyRotation(BlockState state, Rotation rotation) {
-		return state.with(FACING, rotation.method_10503(state.get(FACING)));
+	public BlockState rotate(BlockState state, BlockRotation rotation) {
+		return state.with(FACING, rotation.rotate(state.get(FACING)));
 	}
 	
 	@Override
-	public BlockState applyMirror(BlockState state, Mirror mirror) {
-		return state.applyRotation(mirror.getRotation(state.get(FACING)));
+	public BlockState mirror(BlockState state, BlockMirror mirror) {
+		return state.rotate(mirror.getRotation(state.get(FACING)));
 	}
 	
 	@Override
@@ -52,9 +52,12 @@ public class ConveyorBlock extends PressureTriggeredBlock {
 		Vec3i vec = facing.getVector();
 		Vec3d motion = new Vec3d(vec.getX()*force, vec.getY()*force, vec.getZ()*force);
 		
-		entity.velocityX = adjustScalar(entity.velocityX, motion.x);
-		entity.velocityY = adjustScalar(entity.velocityY, motion.y);
-		entity.velocityZ = adjustScalar(entity.velocityZ, motion.z);
+		Vec3d oldVelocity = entity.getVelocity();
+		
+		entity.setVelocity(
+				adjustScalar(oldVelocity.x , motion.x),
+				adjustScalar(oldVelocity.y , motion.y),
+				adjustScalar(oldVelocity.z , motion.z));
 	}
 	
 	private double adjustScalar(double in, double floor) {

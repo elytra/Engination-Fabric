@@ -29,7 +29,7 @@ public class HeldItemDisappearingBlock extends DisappearingBlock{
 	@Override
 	public void onBlockBreakStart(BlockState state, World world, BlockPos pos, PlayerEntity player) {
 		if (world.isClient()) return; 
-		if (isTrigger(player.getStackInHand(Hand.MAIN))) {
+		if (isTrigger(player.getStackInHand(Hand.MAIN_HAND))) {
 			this.disappearChainReaction(world, pos);
 		}
 	}

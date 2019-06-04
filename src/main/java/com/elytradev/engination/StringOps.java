@@ -30,7 +30,7 @@ public class StringOps {
 	
 	@Environment(EnvType.CLIENT)
 	public static List<String> wordWrapClient(String str, int wrapWidth) {
-		IntUnaryOperator charWidthGetter = (int ch)->(int)MinecraftClient.getInstance().fontRenderer.getCharWidth((char)ch);
+		IntUnaryOperator charWidthGetter = (int ch)->(int)MinecraftClient.getInstance().textRenderer.getCharWidth((char)ch);
 		
 		String languageCode = MinecraftClient.getInstance().getLanguageManager().getLanguage().getCode();
 		Locale currentLocale = Locale.forLanguageTag(languageCode);

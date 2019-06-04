@@ -12,7 +12,7 @@ public class MeleeDisappearingBlock extends DisappearingBlock {
 	@Override
 	public void onBlockBreakStart(BlockState state, World world, BlockPos pos, PlayerEntity player) {
 		if (world.isClient()) return; 
-		if (player.getStackInHand(Hand.MAIN).isEmpty()) {
+		if (player.getStackInHand(Hand.MAIN_HAND).isEmpty()) {
 			this.disappearChainReaction(world, pos);
 		}
 	}
