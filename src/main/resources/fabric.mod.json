@@ -2,7 +2,7 @@
   "id": "engination",
   "name": "Engination Enginogrammetry",
   "description": "Creative Cubes and Conventional Curiosities",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "side": "universal",
   "initializers": [ "com.elytradev.engination.Engination", "com.elytradev.engination.EnginationClient" ],
   "requires": {

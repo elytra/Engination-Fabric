@@ -5,15 +5,17 @@ import java.util.List;
 
 import com.elytradev.engination.Grouped;
 
-import net.minecraft.ChatFormat;
+import net.fabricmc.api.EnvType;
+import net.fabricmc.api.Environment;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
 import net.minecraft.block.PillarBlock;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.ItemStack;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
+import net.minecraft.text.Text;
+import net.minecraft.text.TranslatableText;
 import net.minecraft.util.DyeColor;
+import net.minecraft.util.Formatting;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.loot.context.LootContext.Builder;
 
@@ -31,10 +33,11 @@ public class CosmeticPillar extends PillarBlock implements Grouped {
 				);
 	}
 
+	@Environment(EnvType.CLIENT)
 	@Override
-	public void buildTooltip(ItemStack stack, BlockView world, List<Component> var3, TooltipContext var4) {
+	public void buildTooltip(ItemStack stack, BlockView world, List<Text> var3, TooltipContext var4) {
 		if (group!=null) {
-			var3.add(new TranslatableComponent("blockgroup.engination."+group+".tip").applyFormat(ChatFormat.ITALIC, ChatFormat.GRAY));
+			var3.add(new TranslatableText("blockgroup.engination."+group+".tip").formatted(Formatting.ITALIC, Formatting.GRAY));
 		}
 		super.buildTooltip(stack, world, var3, var4);
 	}

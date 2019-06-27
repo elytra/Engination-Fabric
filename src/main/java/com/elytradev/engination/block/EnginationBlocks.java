@@ -14,6 +14,7 @@ import com.elytradev.engination.item.CosmeticBlockItem;
 
 import net.fabricmc.fabric.api.block.FabricBlockSettings;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -28,6 +29,8 @@ import net.minecraft.util.registry.Registry;
 public class EnginationBlocks {
 	
 	public static Map<String, List<Block>> BLOCK_GROUPS = new HashMap<>();
+	
+	public static TomatoBlock TOMATO_PLANT = null;
 	
 	public static void init() {
 		block("oneup_cyan_block",          Material.STONE, DyeColor.CYAN,   "oneup");
@@ -188,6 +191,9 @@ public class EnginationBlocks {
 		
 		block("disappearing", "fall_through", new FallThroughBlock(), Engination.ENGINATION_GADGETS);
 		block("disappearing", "disguised_fall_through", new FallThroughBlock(), Engination.ENGINATION_GADGETS);
+		
+		TOMATO_PLANT = new TomatoBlock(FabricBlockSettings.copy(Blocks.WHEAT).build());
+		Registry.register(Registry.BLOCK, new Identifier("engination", "tomato_plant"), TOMATO_PLANT);
 	}
 	
 	
