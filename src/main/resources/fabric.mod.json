@@ -1,14 +1,38 @@
 {
+  "schemaVersion": 1,
   "id": "engination",
+  "version": "1.0.3",
+
   "name": "Engination Enginogrammetry",
   "description": "Creative Cubes and Conventional Curiosities",
-  "version": "1.0.3",
-  "side": "universal",
-  "initializers": [ "com.elytradev.engination.Engination", "com.elytradev.engination.EnginationClient" ],
+  "authors": [
+    "Falkreon",
+    "Elytra Team",
+    "The Cotton Project"
+  ],
+
+  "contact": {
+    "homepage": "https://github.com/elytra/Engination-Fabric",
+    "sources": "https://github.com/elytra/Engination-Fabric"
+  },
+
+  "license": "MIT",
+  "icon": "assets/engination/icon.png",
+
+  "environment": "*",
+
+"entrypoints": {
+    "main": [
+      "com.elytradev.engination.Engination"
+    ],
+    "client": [
+      "com.elytradev.engination.EnginationClient"
+    ]
+  },
   "requires": {
     "fabric": "*"
   },
-  "mixins": {
-    "client": "engination.client.json"
-  }
+  "mixins": [
+    "engination.client.json"
+  ]
 }

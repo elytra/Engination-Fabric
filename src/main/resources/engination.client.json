@@ -3,6 +3,8 @@
   "package": "com.elytradev.engination.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+  ],
+  "client": [
   	"SnowballEntityMixin"
   ],
   "injectors": {
