@@ -46,23 +46,27 @@ public class EnginationItems {
 		
 		
 		//TODO: Get help on the FabricLootSupplierBuilder front, I'm either doing something wrong here or the API doesn't work.
-		//LootTableLoadingCallback.EVENT.register(EnginationItems::onLootTableLoad);
+		LootTableLoadingCallback.EVENT.register(EnginationItems::onLootTableLoad);
 	}
 	
-	/*
+	
 	public static void onLootTableLoad(ResourceManager resourceManager, LootManager manager, Identifier id, FabricLootSupplierBuilder supplier, LootTableSetter setter) {
-		if (id.equals(new Identifier("minecraft", "blocks/tall_grass"))) {
+		if (id.equals(new Identifier("minecraft", "blocks/grass"))) {
 			System.out.println("Injecting tomato seeds");
 			
-			LootPool tomatoSeedsPool = new LootPool.Builder()
+			LootPool.Builder tomatoSeedsPool = new LootPool.Builder()
 					.withEntry( ItemEntry.builder(TOMATO_SEEDS) )
 					.withRolls(UniformLootTableRange.between(1, 1))
-					//.withCondition(RandomChanceLootCondition.builder(0.07f))
-			.build();
+					.method_356(RandomChanceLootCondition.builder(0.07f))
+			;
+					//.build();
 			
 			supplier.withPool(tomatoSeedsPool);
 			
-			setter.set(supplier.create());
+			//setter.set(supplier.create());
+		} else {
+			if (id.getPath().contains("grass")) System.out.println(id);
+			
 		}
-	}*/
+	}
 }

@@ -276,9 +276,12 @@
 	"block.engination.fall_through"              : "Fall-Through Block",
 	"block.engination.disguised_fall_through"    : "Disguised Fall-Through Block",
 	
+	"block.engination.tomato_plant"              : "Tomato",
+
 	"tip.engination.sneak_use" : "Sneak + Right-Click air to cycle through block types",
 	
 	"item.engination.celery" : "Celery",
 	"item.engination.tomato" : "Tomato",
+	"item.engination.tomato_seeds" : "Tomato Seeds",
 	"item.engination.creative_tomato" : "Creative Tomato"
 }
