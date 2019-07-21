@@ -29,7 +29,7 @@
       "com.elytradev.engination.EnginationClient"
     ]
   },
-  "requires": {
+  "depends": {
     "fabric": "*"
   },
   "mixins": [
