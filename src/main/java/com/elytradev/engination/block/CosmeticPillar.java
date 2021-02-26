@@ -17,7 +17,7 @@ import net.minecraft.text.TranslatableText;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.BlockView;
-import net.minecraft.world.loot.context.LootContext.Builder;
+import net.minecraft.loot.context.LootContext.Builder;
 
 public class CosmeticPillar extends PillarBlock implements Grouped {
 	protected String group = null;
@@ -35,11 +35,11 @@ public class CosmeticPillar extends PillarBlock implements Grouped {
 
 	@Environment(EnvType.CLIENT)
 	@Override
-	public void buildTooltip(ItemStack stack, BlockView world, List<Text> var3, TooltipContext var4) {
+	public void appendTooltip(ItemStack stack, BlockView world, List<Text> var3, TooltipContext var4) {
 		if (group!=null) {
 			var3.add(new TranslatableText("blockgroup.engination."+group+".tip").formatted(Formatting.ITALIC, Formatting.GRAY));
 		}
-		super.buildTooltip(stack, world, var3, var4);
+		super.appendTooltip(stack, world, var3, var4);
 	}
 	
 	@Override

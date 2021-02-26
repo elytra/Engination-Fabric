@@ -18,7 +18,7 @@ import net.minecraft.text.Text;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.BlockView;
-import net.minecraft.world.loot.context.LootContext.Builder;
+import net.minecraft.loot.context.LootContext.Builder;
 
 public class CosmeticBlock extends Block implements Grouped {
 	protected String group = null;
@@ -41,7 +41,7 @@ public class CosmeticBlock extends Block implements Grouped {
 		
 	@Environment(EnvType.CLIENT)
 	@Override
-	public void buildTooltip(ItemStack var1, BlockView var2, List<Text> var3, TooltipContext var4) {
+	public void appendTooltip(ItemStack var1, BlockView var2, List<Text> var3, TooltipContext var4) {
 		if (group!=null) {
 			String key = "blockgroup.engination."+group+".tip";
 			List<String> localized = StringOps.wordWrap(StringOps.localize(key), 36);
@@ -49,7 +49,7 @@ public class CosmeticBlock extends Block implements Grouped {
 				var3.add(new LiteralText(s).formatted(Formatting.GRAY, Formatting.ITALIC));
 			}
 		}
-		super.buildTooltip(var1, var2, var3, var4);
+		super.appendTooltip(var1, var2, var3, var4);
 	}
 	
 	@Override

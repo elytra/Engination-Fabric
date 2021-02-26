@@ -11,7 +11,7 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.minecraft.world.loot.context.LootContext;
+import net.minecraft.loot.context.LootContext;
 
 public abstract class PressureTriggeredBlock extends Block {
 

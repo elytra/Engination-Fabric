@@ -13,11 +13,11 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.resource.ResourceManager;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import net.minecraft.world.loot.LootManager;
-import net.minecraft.world.loot.LootPool;
-import net.minecraft.world.loot.UniformLootTableRange;
-import net.minecraft.world.loot.condition.RandomChanceLootCondition;
-import net.minecraft.world.loot.entry.ItemEntry;
+import net.minecraft.loot.LootManager;
+import net.minecraft.loot.LootPool;
+import net.minecraft.loot.UniformLootTableRange;
+import net.minecraft.loot.condition.RandomChanceLootCondition;
+import net.minecraft.loot.entry.ItemEntry;
 
 public class EnginationItems {
 	public static TomatoItem       TOMATO;
