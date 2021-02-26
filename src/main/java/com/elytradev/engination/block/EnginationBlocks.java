@@ -108,7 +108,7 @@ public class EnginationBlocks {
 				"orb", "platforms", "panel", "scaffold", "boiler", "corroded", "ledge", "support", "vent"
 				);
 		
-		
+//		TODO: uncomment this, find replacement material
 //		block("sanic_dark_checker",        Material.CLAY,  DyeColor.BLUE,   "sanic");
 //		block("sanic_medium_checker",      Material.CLAY,  DyeColor.CYAN,   "sanic");
 //		block("sanic_bright_checker",      Material.CLAY,  DyeColor.WHITE,  "sanic");
@@ -121,7 +121,7 @@ public class EnginationBlocks {
 //		block("sanic_darkest_large_tile",  Material.CLAY,  DyeColor.BLUE,   "sanic");
 //		block("sanic_dark_large_tile",     Material.CLAY,  DyeColor.BLUE,   "sanic");
 //		block("sanic_medium_large_tile",   Material.CLAY,  DyeColor.CYAN,   "sanic");
-//		block("sanic_bright_large_tile",   Material.CLAY,  DyeColor.WHITE,  "sanic");import net.minecraft.state.StateFactory;
+//		block("sanic_bright_large_tile",   Material.CLAY,  DyeColor.WHITE,  "sanic");
 //		block("sanic_white_large_tile",    Material.CLAY,  DyeColor.WHITE,  "sanic");
 		block("sanic_gold_oil_spike",      Material.METAL, DyeColor.YELLOW, "sanic");
 		block("sanic_purple_oil_spike",    Material.METAL, DyeColor.PURPLE, "sanic");

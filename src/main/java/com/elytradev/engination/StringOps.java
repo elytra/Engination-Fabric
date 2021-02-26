@@ -43,6 +43,7 @@ public class StringOps {
 	 * idea how wide a character is, and as far as I can tell are always set to en_US. It's almost always better to use
 	 * {@link #wordWrapClient(String, int)}
 	 */
+} catch (Throwable t2) {
 	public static List<String> wordWrap(String str, int wrapWidth) {
 		return wrapToWidth3TUSK(str, wrapWidth, (ch)->1, Locale.getDefault());
 	}
