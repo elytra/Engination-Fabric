@@ -109,20 +109,20 @@ public class EnginationBlocks {
 				);
 		
 		
-		block("sanic_dark_checker",        Material.CLAY,  DyeColor.BLUE,   "sanic");
-		block("sanic_medium_checker",      Material.CLAY,  DyeColor.CYAN,   "sanic");
-		block("sanic_bright_checker",      Material.CLAY,  DyeColor.WHITE,  "sanic");
-		block("sanic_white_checker",       Material.CLAY,  DyeColor.WHITE,  "sanic");
-		block("sanic_darkest_tiles",       Material.CLAY,  DyeColor.BLUE,   "sanic");
-		block("sanic_dark_tiles",          Material.CLAY,  DyeColor.BLUE,   "sanic");
-		block("sanic_medium_tiles",        Material.CLAY,  DyeColor.CYAN,   "sanic");
-		block("sanic_bright_tiles",        Material.CLAY,  DyeColor.WHITE,  "sanic");
-		block("sanic_white_tiles",         Material.CLAY,  DyeColor.WHITE,  "sanic");
-		block("sanic_darkest_large_tile",  Material.CLAY,  DyeColor.BLUE,   "sanic");
-		block("sanic_dark_large_tile",     Material.CLAY,  DyeColor.BLUE,   "sanic");
-		block("sanic_medium_large_tile",   Material.CLAY,  DyeColor.CYAN,   "sanic");
-		block("sanic_bright_large_tile",   Material.CLAY,  DyeColor.WHITE,  "sanic");
-		block("sanic_white_large_tile",    Material.CLAY,  DyeColor.WHITE,  "sanic");
+//		block("sanic_dark_checker",        Material.CLAY,  DyeColor.BLUE,   "sanic");
+//		block("sanic_medium_checker",      Material.CLAY,  DyeColor.CYAN,   "sanic");
+//		block("sanic_bright_checker",      Material.CLAY,  DyeColor.WHITE,  "sanic");
+//		block("sanic_white_checker",       Material.CLAY,  DyeColor.WHITE,  "sanic");
+//		block("sanic_darkest_tiles",       Material.CLAY,  DyeColor.BLUE,   "sanic");
+//		block("sanic_dark_tiles",          Material.CLAY,  DyeColor.BLUE,   "sanic");
+//		block("sanic_medium_tiles",        Material.CLAY,  DyeColor.CYAN,   "sanic");
+//		block("sanic_bright_tiles",        Material.CLAY,  DyeColor.WHITE,  "sanic");
+//		block("sanic_white_tiles",         Material.CLAY,  DyeColor.WHITE,  "sanic");
+//		block("sanic_darkest_large_tile",  Material.CLAY,  DyeColor.BLUE,   "sanic");
+//		block("sanic_dark_large_tile",     Material.CLAY,  DyeColor.BLUE,   "sanic");
+//		block("sanic_medium_large_tile",   Material.CLAY,  DyeColor.CYAN,   "sanic");
+//		block("sanic_bright_large_tile",   Material.CLAY,  DyeColor.WHITE,  "sanic");import net.minecraft.state.StateFactory;
+//		block("sanic_white_large_tile",    Material.CLAY,  DyeColor.WHITE,  "sanic");
 		block("sanic_gold_oil_spike",      Material.METAL, DyeColor.YELLOW, "sanic");
 		block("sanic_purple_oil_spike",    Material.METAL, DyeColor.PURPLE, "sanic");
 		block("sanic_gold_oil_spikes",     Material.METAL, DyeColor.YELLOW, "sanic");

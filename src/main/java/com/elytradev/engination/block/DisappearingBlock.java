@@ -15,7 +15,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
 import net.minecraft.entity.EntityContext;
 import net.minecraft.item.ItemStack;
-import net.minecraft.state.StateFactory;
+import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.TaskPriority;
@@ -44,11 +44,11 @@ public abstract class DisappearingBlock extends Block {
 				.build()
 				);
 		
-		this.setDefaultState(this.stateFactory.getDefaultState().with(DISAPPEARED, false));
+		this.setDefaultState(this.stateManager.getDefaultState().with(DISAPPEARED, false));
 	}
 	
 	@Override
-	protected void appendProperties(StateFactory.Builder<Block, BlockState> builder) {
+	protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
 		builder.add(DISAPPEARED);
 	}
 	

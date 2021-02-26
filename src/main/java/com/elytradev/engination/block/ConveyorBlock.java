@@ -5,7 +5,7 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.state.StateFactory;
+import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.BlockMirror;
@@ -27,7 +27,7 @@ public class ConveyorBlock extends PressureTriggeredBlock {
 	}
 	
 	@Override
-	protected void appendProperties(StateFactory.Builder<Block, BlockState> var1) {
+	protected void appendProperties(StateManager.Builder<Block, BlockState> var1) {
 		var1.add(FACING);
 	}
 	
