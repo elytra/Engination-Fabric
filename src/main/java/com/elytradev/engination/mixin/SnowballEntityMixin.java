@@ -29,7 +29,7 @@ public abstract class SnowballEntityMixin extends ThrownItemEntity {
 			for(int i = 0; i < 64; i++) {
 				double vx = world.random.nextDouble() - 0.5;
 				double vz = world.random.nextDouble() - 0.5;
-				this.world.addParticle(params, this.x, this.y, this.z, vx, 0.0D, vz);
+				this.world.addParticle(params, this.getX(), this.getY(), this.getZ(), vx, 0.0D, vz);
 			}
 		}
 	}

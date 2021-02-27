@@ -12,7 +12,7 @@ import com.elytradev.engination.Engination;
 import com.elytradev.engination.Grouped;
 import com.elytradev.engination.item.CosmeticBlockItem;
 
-import net.fabricmc.fabric.api.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
@@ -192,7 +192,7 @@ public class EnginationBlocks {
 		block("disappearing", "fall_through", new FallThroughBlock(), Engination.ENGINATION_GADGETS);
 		block("disappearing", "disguised_fall_through", new FallThroughBlock(), Engination.ENGINATION_GADGETS);
 		
-		TOMATO_PLANT = new TomatoBlock(FabricBlockSettings.copy(Blocks.WHEAT).build());
+		TOMATO_PLANT = new TomatoBlock(FabricBlockSettings.copy(Blocks.WHEAT));
 		Registry.register(Registry.BLOCK, new Identifier("engination", "tomato_plant"), TOMATO_PLANT);
 	}
 	
@@ -268,7 +268,7 @@ public class EnginationBlocks {
 	public static CosmeticBlock lamp(String name, Material material, DyeColor color, String group) {
 		FabricBlockSettings settings = FabricBlockSettings.of(material).materialColor(color).strength(1f, 15f).lightLevel(15);
 		
-		CosmeticBlock result = new CosmeticBlock(settings.build(), group);
+		CosmeticBlock result = new CosmeticBlock(settings, group);
 		List<Block> blockGroup = BLOCK_GROUPS.get(group);
 		if (blockGroup==null) {
 			blockGroup = new ArrayList<>();

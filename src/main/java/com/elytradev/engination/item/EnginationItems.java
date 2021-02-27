@@ -55,13 +55,13 @@ public class EnginationItems {
 			System.out.println("Injecting tomato seeds");
 			
 			LootPool.Builder tomatoSeedsPool = new LootPool.Builder()
-					.withEntry( ItemEntry.builder(TOMATO_SEEDS) )
-					.withRolls(UniformLootTableRange.between(1, 1))
-					.method_356(RandomChanceLootCondition.builder(0.07f))
+					.with( ItemEntry.builder(TOMATO_SEEDS) )
+					.rolls(UniformLootTableRange.between(1, 1))
+					.conditionally(RandomChanceLootCondition.builder(0.07f))
 			;
 					//.build();
 			
-			supplier.withPool(tomatoSeedsPool);
+			supplier.withPool(tomatoSeedsPool.build());
 			
 			//setter.set(supplier.create());
 		} else {

@@ -27,18 +27,18 @@ public class CosmeticBlockItem extends BlockItem {
 	public TypedActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand) {
 		ItemStack existing = player.getStackInHand(hand);
 		
-		if (world.isClient || !player.isSneaking()) return new TypedActionResult<ItemStack>(ActionResult.PASS, existing);
+		if (world.isClient || !player.isSneaking()) return new TypedActionResult<>(ActionResult.PASS, existing);
 		
 		if (getBlock() instanceof Grouped) {
 			String groupId = ((Grouped)getBlock()).getGroupId();
 			ItemStack stack = EnginationBlocks.getNextItem(existing, groupId);
 			if (stack!=null) {
-				return new TypedActionResult<ItemStack>(ActionResult.SUCCESS, stack);
+				return new TypedActionResult<>(ActionResult.SUCCESS, stack);
 			} else {
 				System.out.println("NULL DEST?");
 			}
 		}
-		return new TypedActionResult<ItemStack>(ActionResult.PASS, existing);
+		return new TypedActionResult<>(ActionResult.PASS, existing);
 	}
 	
 	@Override

@@ -28,7 +28,7 @@ public class TomatoItem extends Item {
 			itemStack.decrement(1);
 		}
 		
-		world.playSound((PlayerEntity)null, player.x, player.y, player.z, Engination.SOUND_THROW, SoundCategory.NEUTRAL, 0.5F, 0.4F / (RANDOM.nextFloat() * 0.4F + 0.8F));
+		world.playSound((PlayerEntity)null, player.getX(), player.getY(), player.getZ(), Engination.SOUND_THROW, SoundCategory.NEUTRAL, 0.5F, 0.4F / (RANDOM.nextFloat() * 0.4F + 0.8F));
 		if (!world.isClient) {
 			SnowballEntity entity = new SnowballEntity(world, player);
 			entity.setItem(new ItemStack(EnginationItems.TOMATO));
@@ -40,8 +40,7 @@ public class TomatoItem extends Item {
 			
 			
 			entity.setItem(new ItemStack(EnginationItems.TOMATO));//itemStack);
-			entity.method_19207(player, player.pitch, player.yaw, 0.0f, 1.5f, 1.0f);
-			//entity.calculateVelocity(player, player.pitch, player.yaw, 0.0F, 1.5F, 1.0F);
+			entity.setProperties(player, player.pitch, player.yaw, 0.0f, 1.5f, 1.0f);
 			world.spawnEntity(entity);
 		}
 		
