@@ -2,12 +2,14 @@ package com.elytradev.engination.block;
 
 import com.elytradev.engination.Engination;
 
+import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
 public class LauncherBlock extends PressureTriggeredBlock {
@@ -19,9 +21,9 @@ public class LauncherBlock extends PressureTriggeredBlock {
 	}
 	
 	@Override
-	public void onLandedUpon(World world, BlockPos pos, Entity entity, float var4) {
+	public void onLandedUpon(World world, BlockState state, BlockPos pos, Entity entity, float fallDistance) {
 		entity.fallDistance = 0; //both sides, all entities
-		super.onLandedUpon(world, pos, entity, var4);
+		super.onLandedUpon(world, state, pos, entity, 0);
 	}
 	
 	@Override
@@ -31,7 +33,8 @@ public class LauncherBlock extends PressureTriggeredBlock {
 			entity.setVelocity(entity.getVelocity().x, newY, entity.getVelocity().z);
 			//TODO: Register the mario jump sound
 			//world.playSound(entity.x, entity.y, entity.z, Engination.SOUND_LAUNCH, net.minecraft.sound.SoundCategory.PLAYER, 0.5F, world.getRandom().nextFloat() * 0.4F + 1.0F);
-			world.playSound(entity.x, entity.y, entity.z, Engination.SOUND_JUMP, SoundCategory.PLAYERS, 0.5f, world.getRandom().nextFloat() * 0.4F + 1.0F, true);
+			Vec3d vec = entity.getPos();
+			world.playSound(vec.x, vec.y, vec.z, Engination.SOUND_JUMP, SoundCategory.PLAYERS, 0.5f, world.getRandom().nextFloat() * 0.4F + 1.0F, true);
 		}
 	}
 	

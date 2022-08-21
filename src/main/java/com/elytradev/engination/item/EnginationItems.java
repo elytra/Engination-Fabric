@@ -3,9 +3,6 @@ package com.elytradev.engination.item;
 import com.elytradev.engination.Engination;
 import com.elytradev.engination.block.EnginationBlocks;
 
-import net.fabricmc.fabric.api.loot.v1.FabricLootSupplierBuilder;
-import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback;
-import net.fabricmc.fabric.api.loot.v1.event.LootTableLoadingCallback.LootTableSetter;
 import net.minecraft.item.AliasedBlockItem;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
@@ -13,11 +10,6 @@ import net.minecraft.item.ItemGroup;
 import net.minecraft.resource.ResourceManager;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import net.minecraft.world.loot.LootManager;
-import net.minecraft.world.loot.LootPool;
-import net.minecraft.world.loot.UniformLootTableRange;
-import net.minecraft.world.loot.condition.RandomChanceLootCondition;
-import net.minecraft.world.loot.entry.ItemEntry;
 
 public class EnginationItems {
 	public static TomatoItem       TOMATO;
@@ -46,10 +38,11 @@ public class EnginationItems {
 		
 		
 		//TODO: Get help on the FabricLootSupplierBuilder front, I'm either doing something wrong here or the API doesn't work.
-		LootTableLoadingCallback.EVENT.register(EnginationItems::onLootTableLoad);
+		
+		//LootTableLoadingCallback.EVENT.register(EnginationItems::onLootTableLoad);
 	}
 	
-	
+	/*
 	public static void onLootTableLoad(ResourceManager resourceManager, LootManager manager, Identifier id, FabricLootSupplierBuilder supplier, LootTableSetter setter) {
 		if (id.equals(new Identifier("minecraft", "blocks/grass"))) {
 			System.out.println("Injecting tomato seeds");
@@ -68,5 +61,5 @@ public class EnginationItems {
 			if (id.getPath().contains("grass")) System.out.println(id);
 			
 		}
-	}
+	}*/
 }

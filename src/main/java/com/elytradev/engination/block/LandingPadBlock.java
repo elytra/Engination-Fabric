@@ -8,10 +8,10 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.loot.context.LootContext;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.minecraft.world.loot.context.LootContext;
 
 public class LandingPadBlock extends Block {
 
@@ -20,12 +20,13 @@ public class LandingPadBlock extends Block {
 	}
 
 	@Override
-	public void onLandedUpon(World var1, BlockPos var2, Entity var3, float var4) {
-		var3.fallDistance = 0;
+	public void onLandedUpon(World world, BlockState state, BlockPos pos, Entity entity, float fallDistance) {
+		entity.fallDistance = 0;
 	}
 
 	@Override
 	public List<ItemStack> getDroppedStacks(BlockState blockState_1, LootContext.Builder lootContext$Builder_1) {
+		@SuppressWarnings("deprecation")
 		List<ItemStack> superStacks = super.getDroppedStacks(blockState_1, lootContext$Builder_1);
 		if (!superStacks.isEmpty()) return superStacks;
 		

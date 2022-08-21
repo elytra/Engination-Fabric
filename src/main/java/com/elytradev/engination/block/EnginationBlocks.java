@@ -12,7 +12,7 @@ import com.elytradev.engination.Engination;
 import com.elytradev.engination.Grouped;
 import com.elytradev.engination.item.CosmeticBlockItem;
 
-import net.fabricmc.fabric.api.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.Material;
@@ -109,20 +109,20 @@ public class EnginationBlocks {
 				);
 		
 		
-		block("sanic_dark_checker",        Material.CLAY,  DyeColor.BLUE,   "sanic");
-		block("sanic_medium_checker",      Material.CLAY,  DyeColor.CYAN,   "sanic");
-		block("sanic_bright_checker",      Material.CLAY,  DyeColor.WHITE,  "sanic");
-		block("sanic_white_checker",       Material.CLAY,  DyeColor.WHITE,  "sanic");
-		block("sanic_darkest_tiles",       Material.CLAY,  DyeColor.BLUE,   "sanic");
-		block("sanic_dark_tiles",          Material.CLAY,  DyeColor.BLUE,   "sanic");
-		block("sanic_medium_tiles",        Material.CLAY,  DyeColor.CYAN,   "sanic");
-		block("sanic_bright_tiles",        Material.CLAY,  DyeColor.WHITE,  "sanic");
-		block("sanic_white_tiles",         Material.CLAY,  DyeColor.WHITE,  "sanic");
-		block("sanic_darkest_large_tile",  Material.CLAY,  DyeColor.BLUE,   "sanic");
-		block("sanic_dark_large_tile",     Material.CLAY,  DyeColor.BLUE,   "sanic");
-		block("sanic_medium_large_tile",   Material.CLAY,  DyeColor.CYAN,   "sanic");
-		block("sanic_bright_large_tile",   Material.CLAY,  DyeColor.WHITE,  "sanic");
-		block("sanic_white_large_tile",    Material.CLAY,  DyeColor.WHITE,  "sanic");
+		block("sanic_dark_checker",        Material.ORGANIC_PRODUCT,  DyeColor.BLUE,   "sanic");
+		block("sanic_medium_checker",      Material.ORGANIC_PRODUCT,  DyeColor.CYAN,   "sanic");
+		block("sanic_bright_checker",      Material.ORGANIC_PRODUCT,  DyeColor.WHITE,  "sanic");
+		block("sanic_white_checker",       Material.ORGANIC_PRODUCT,  DyeColor.WHITE,  "sanic");
+		block("sanic_darkest_tiles",       Material.ORGANIC_PRODUCT,  DyeColor.BLUE,   "sanic");
+		block("sanic_dark_tiles",          Material.ORGANIC_PRODUCT,  DyeColor.BLUE,   "sanic");
+		block("sanic_medium_tiles",        Material.ORGANIC_PRODUCT,  DyeColor.CYAN,   "sanic");
+		block("sanic_bright_tiles",        Material.ORGANIC_PRODUCT,  DyeColor.WHITE,  "sanic");
+		block("sanic_white_tiles",         Material.ORGANIC_PRODUCT,  DyeColor.WHITE,  "sanic");
+		block("sanic_darkest_large_tile",  Material.ORGANIC_PRODUCT,  DyeColor.BLUE,   "sanic");
+		block("sanic_dark_large_tile",     Material.ORGANIC_PRODUCT,  DyeColor.BLUE,   "sanic");
+		block("sanic_medium_large_tile",   Material.ORGANIC_PRODUCT,  DyeColor.CYAN,   "sanic");
+		block("sanic_bright_large_tile",   Material.ORGANIC_PRODUCT,  DyeColor.WHITE,  "sanic");
+		block("sanic_white_large_tile",    Material.ORGANIC_PRODUCT,  DyeColor.WHITE,  "sanic");
 		block("sanic_gold_oil_spike",      Material.METAL, DyeColor.YELLOW, "sanic");
 		block("sanic_purple_oil_spike",    Material.METAL, DyeColor.PURPLE, "sanic");
 		block("sanic_gold_oil_spikes",     Material.METAL, DyeColor.YELLOW, "sanic");
@@ -192,7 +192,7 @@ public class EnginationBlocks {
 		block("disappearing", "fall_through", new FallThroughBlock(), Engination.ENGINATION_GADGETS);
 		block("disappearing", "disguised_fall_through", new FallThroughBlock(), Engination.ENGINATION_GADGETS);
 		
-		TOMATO_PLANT = new TomatoBlock(FabricBlockSettings.copy(Blocks.WHEAT).build());
+		TOMATO_PLANT = new TomatoBlock(FabricBlockSettings.copy(Blocks.WHEAT));
 		Registry.register(Registry.BLOCK, new Identifier("engination", "tomato_plant"), TOMATO_PLANT);
 	}
 	
@@ -266,9 +266,9 @@ public class EnginationBlocks {
 	}
 	
 	public static CosmeticBlock lamp(String name, Material material, DyeColor color, String group) {
-		FabricBlockSettings settings = FabricBlockSettings.of(material).materialColor(color).strength(1f, 15f).lightLevel(15);
+		FabricBlockSettings settings = FabricBlockSettings.of(material).mapColor(color).strength(1f, 15f).luminance(15);
 		
-		CosmeticBlock result = new CosmeticBlock(settings.build(), group);
+		CosmeticBlock result = new CosmeticBlock(settings, group);
 		List<Block> blockGroup = BLOCK_GROUPS.get(group);
 		if (blockGroup==null) {
 			blockGroup = new ArrayList<>();

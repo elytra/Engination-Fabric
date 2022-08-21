@@ -1,5 +1,6 @@
 package com.elytradev.engination.block;
 
+import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -13,7 +14,7 @@ public class FallThroughBlock extends DisappearingBlock {
 	}
 	
 	@Override
-	public void onSteppedOn(World world, BlockPos pos, Entity entity) {
+	public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
 		if (world.isClient()) return;
 		
 		this.disappearChainHorizontal(world, pos);

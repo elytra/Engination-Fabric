@@ -19,11 +19,7 @@ public class HeldItemDisappearingBlock extends DisappearingBlock{
 		if (stack.getItem()!=trigger.getItem()) return false;
 		
 		//If you supply a stack with non-empty tags, they must be equal. Otherwise ignore NBT.
-		if (trigger.hasTag() && !trigger.getTag().isEmpty()) {
-			if (!ItemStack.areTagsEqual(stack, trigger)) return false;
-		}
-		
-		return true;
+		return ItemStack.areNbtEqual(trigger, stack);
 	}
 	
 	@Override

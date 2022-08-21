@@ -13,12 +13,11 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.ItemStack;
-import net.minecraft.text.LiteralText;
+import net.minecraft.loot.context.LootContext;
 import net.minecraft.text.Text;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.BlockView;
-import net.minecraft.world.loot.context.LootContext.Builder;
 
 public class CosmeticBlock extends Block implements Grouped {
 	protected String group = null;
@@ -41,19 +40,20 @@ public class CosmeticBlock extends Block implements Grouped {
 		
 	@Environment(EnvType.CLIENT)
 	@Override
-	public void buildTooltip(ItemStack var1, BlockView var2, List<Text> var3, TooltipContext var4) {
+	public void appendTooltip(ItemStack var1, BlockView var2, List<Text> var3, TooltipContext var4) {
 		if (group!=null) {
 			String key = "blockgroup.engination."+group+".tip";
 			List<String> localized = StringOps.wordWrap(StringOps.localize(key), 36);
 			for(String s : localized) {
-				var3.add(new LiteralText(s).formatted(Formatting.GRAY, Formatting.ITALIC));
+				var3.add(Text.literal(s).formatted(Formatting.GRAY, Formatting.ITALIC));
 			}
 		}
-		super.buildTooltip(var1, var2, var3, var4);
+		super.appendTooltip(var1, var2, var3, var4);
 	}
 	
 	@Override
-	public List<ItemStack> getDroppedStacks(BlockState var1, Builder var2) {
+	public List<ItemStack> getDroppedStacks(BlockState var1, LootContext.Builder var2) {
+		@SuppressWarnings("deprecation")
 		List<ItemStack> superStacks = super.getDroppedStacks(var1, var2);
 		if (!superStacks.isEmpty()) return superStacks;
 		

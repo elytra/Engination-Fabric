@@ -9,9 +9,9 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
+import net.minecraft.loot.context.LootContext;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-import net.minecraft.world.loot.context.LootContext;
 
 public abstract class PressureTriggeredBlock extends Block {
 
@@ -21,6 +21,7 @@ public abstract class PressureTriggeredBlock extends Block {
 	
 	@Override
 	public List<ItemStack> getDroppedStacks(BlockState var1, LootContext.Builder var2) {
+		@SuppressWarnings("deprecation")
 		List<ItemStack> superStacks = super.getDroppedStacks(var1, var2);
 		if (!superStacks.isEmpty()) return superStacks;
 		
@@ -30,7 +31,7 @@ public abstract class PressureTriggeredBlock extends Block {
 	}
 	
 	@Override
-	public void onLandedUpon(World world, BlockPos pos, Entity entity, float var4) {
+	public void onLandedUpon(World world, BlockState state, BlockPos pos, Entity entity, float fallDistance) {
 		if (!(entity instanceof LivingEntity)) return;
 		if (entity instanceof PlayerEntity) {
 			if (world.isClient()) trigger(world, pos, (LivingEntity)entity);
@@ -40,7 +41,7 @@ public abstract class PressureTriggeredBlock extends Block {
 	}
 	
 	@Override
-	public void onSteppedOn(World world, BlockPos pos, Entity entity) {
+	public void onSteppedOn(World world, BlockPos pos, BlockState state, Entity entity) {
 		if (!(entity instanceof LivingEntity)) return;
 		if (entity instanceof PlayerEntity) {
 			if (world.isClient()) trigger(world, pos, (LivingEntity)entity);

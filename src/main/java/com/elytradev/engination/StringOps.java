@@ -12,15 +12,15 @@ import net.minecraft.client.MinecraftClient;
 import net.minecraft.util.Language;
 
 public class StringOps {
-	private static final Language EMPTY_LANGUAGE = new Language();
+	private static final Language EMPTY_LANGUAGE = Language.getInstance();
 	
 	public static String localize(String s) {
 		Language preferred = Language.getInstance();
 		try {
-			return preferred.translate(s);
+			return preferred.get(s);
 		} catch (Throwable t) {
 			try {
-				return EMPTY_LANGUAGE.translate(s);
+				return EMPTY_LANGUAGE.get(s);
 			} catch (Throwable t2) {
 				return s;
 			}
@@ -30,7 +30,7 @@ public class StringOps {
 	
 	@Environment(EnvType.CLIENT)
 	public static List<String> wordWrapClient(String str, int wrapWidth) {
-		IntUnaryOperator charWidthGetter = (int ch)->(int)MinecraftClient.getInstance().textRenderer.getCharWidth((char)ch);
+		IntUnaryOperator charWidthGetter = (int ch)->(int)MinecraftClient.getInstance().textRenderer.getWidth(""+(char)ch);
 		
 		String languageCode = MinecraftClient.getInstance().getLanguageManager().getLanguage().getCode();
 		Locale currentLocale = Locale.forLanguageTag(languageCode);

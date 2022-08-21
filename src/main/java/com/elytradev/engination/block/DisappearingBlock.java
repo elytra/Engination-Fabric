@@ -3,57 +3,53 @@ package com.elytradev.engination.block;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Random;
 import java.util.Set;
 
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
-import net.fabricmc.fabric.api.block.FabricBlockSettings;
+import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockRenderLayer;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
-import net.minecraft.entity.EntityContext;
+import net.minecraft.block.ShapeContext;
 import net.minecraft.item.ItemStack;
-import net.minecraft.state.StateFactory;
+import net.minecraft.loot.context.LootContext;
+import net.minecraft.server.world.ServerWorld;
+import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.util.DyeColor;
-import net.minecraft.util.TaskPriority;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
 import net.minecraft.world.BlockView;
-import net.minecraft.world.ViewableWorld;
+import net.minecraft.world.TickPriority;
 import net.minecraft.world.World;
-import net.minecraft.world.loot.context.LootContext;
 
 public abstract class DisappearingBlock extends Block {
 	public static final BooleanProperty DISAPPEARED = BooleanProperty.of("disappeared");
 	
 	public static int DELAY_REAPPEAR = 20 * 5;
 	public static int DISAPPEAR_CHAIN_MAX = 16;
-	public static final int FLAGS = 2;
+	public static final int FLAGS = Block.NOTIFY_ALL;
 	public static final ChainReactionType CHAINTYPE_NONE = new ChainReactionType();
 	
 	public DisappearingBlock() {
 		super(
 				FabricBlockSettings.of(Material.METAL)
-				.materialColor(DyeColor.WHITE)
+				.mapColor(DyeColor.WHITE)
 				.hardness(1)
 				.resistance(15)
-				.build()
 				);
 		
-		this.setDefaultState(this.stateFactory.getDefaultState().with(DISAPPEARED, false));
+		this.setDefaultState(this.stateManager.getDefaultState().with(DISAPPEARED, false));
 	}
 	
 	@Override
-	protected void appendProperties(StateFactory.Builder<Block, BlockState> builder) {
+	protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
 		builder.add(DISAPPEARED);
 	}
 	
 	@Override
 	public List<ItemStack> getDroppedStacks(BlockState var1, LootContext.Builder var2) {
+		@SuppressWarnings("deprecation")
 		List<ItemStack> superStacks = super.getDroppedStacks(var1, var2);
 		if (!superStacks.isEmpty()) return superStacks;
 		
@@ -67,15 +63,8 @@ public abstract class DisappearingBlock extends Block {
 		return true;
 	}
 	
-	
-	/*
 	@Override
-	public boolean canCollideWith(BlockState state) {
-		return !state.get(DISAPPEARED);
-	}*/
-	
-	@Override
-	public VoxelShape getCollisionShape(BlockState state, BlockView view, BlockPos pos, EntityContext relativePosition) {
+	public VoxelShape getCollisionShape(BlockState state, BlockView view, BlockPos pos, ShapeContext relativePosition) {
 		if (state.get(DISAPPEARED)) {
 			return VoxelShapes.empty();
 		} else {
@@ -84,8 +73,7 @@ public abstract class DisappearingBlock extends Block {
 	}
 	
 	@Override
-	public void onScheduledTick(BlockState state, World world, BlockPos pos, Random random) {
-		
+	public void scheduledTick(BlockState state, ServerWorld world, BlockPos pos, net.minecraft.util.math.random.Random random) {
 		world.setBlockState(pos, state.with(DISAPPEARED, false), FLAGS);
 	}
 	
@@ -119,6 +107,15 @@ public abstract class DisappearingBlock extends Block {
 		
 		for(BlockPos cur : flood) {
 			disappearInternal(world, cur);
+		}
+	}
+	
+	@Override
+	public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
+		if (state.get(DISAPPEARED)) {
+			return VoxelShapes.empty();
+		} else {
+			return super.getOutlineShape(state, world, pos, context);
 		}
 	}
 	
@@ -160,19 +157,25 @@ public abstract class DisappearingBlock extends Block {
 		if (curState.get(DISAPPEARED)) return;
 		
 		world.setBlockState(pos, curState.with(DISAPPEARED, true), FLAGS);
-		world.getBlockTickScheduler().schedule(pos, this, getTickRate(world), TaskPriority.LOW);
+		//world.getBlockTickScheduler().scheduleTick(new OrderedTick<Block>(this, pos, world.getBlockTickScheduler().getTickCount() + this.getUpdateDelayInternal(curState), TickPriority.LOW, 0L));
+		world.createAndScheduleBlockTick(pos, this, getUpdateDelayInternal(curState), TickPriority.LOW);
+		//world.getBlockTickScheduler().schedule(pos, this, getUpdateDelayInternal(curState), TickPriority.LOW);
 	}
 	
-	@Override
-	public int getTickRate(ViewableWorld world) {
+	protected int getUpdateDelayInternal(BlockState state) {
 		return DELAY_REAPPEAR;
 	}
+	//@Override
+	//public int getTickRate(World world) {
+	//	return DELAY_REAPPEAR;
+	//}
 	
+	/*
 	@Environment(EnvType.CLIENT)
 	@Override
 	public BlockRenderLayer getRenderLayer() {
 		return BlockRenderLayer.CUTOUT_MIPPED;
-	}
+	}*/
 	
 	public abstract ChainReactionType getChainReactionType();
 	

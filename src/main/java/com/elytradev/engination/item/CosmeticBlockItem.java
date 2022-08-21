@@ -11,7 +11,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.text.Text;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Formatting;
 import net.minecraft.util.Hand;
@@ -43,7 +42,7 @@ public class CosmeticBlockItem extends BlockItem {
 	
 	@Override
 	public void appendTooltip(ItemStack itemStack_1, World world_1, List<Text> list, TooltipContext tooltipOptions_1) {
-		list.add(new TranslatableText("tip.engination.sneak_use").formatted(Formatting.AQUA));
+		list.add(Text.translatable("tip.engination.sneak_use").formatted(Formatting.AQUA));
 		super.appendTooltip(itemStack_1, world_1, list, tooltipOptions_1);
 	}
 }
