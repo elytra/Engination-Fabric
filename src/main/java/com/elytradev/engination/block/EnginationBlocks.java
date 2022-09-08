@@ -168,9 +168,9 @@ public class EnginationBlocks {
 				"large_tile", "tiles", "dots", "grate", "embossed", "brick", "panel", "t"
 				);
 		
-		block("conveyor", "conveyor",                new ConveyorBlock(2.0), Engination.ENGINATION_GADGETS);
-		block("conveyor", "fast_conveyor",           new ConveyorBlock(4.0), Engination.ENGINATION_GADGETS);
-		block("conveyor", "ultra_fast_conveyor",     new ConveyorBlock(8.0), Engination.ENGINATION_GADGETS);
+		block("conveyor", "conveyor",                new ConveyorBlock(0.2), Engination.ENGINATION_GADGETS);
+		block("conveyor", "fast_conveyor",           new ConveyorBlock(0.4), Engination.ENGINATION_GADGETS);
+		block("conveyor", "ultra_fast_conveyor",     new ConveyorBlock(0.8), Engination.ENGINATION_GADGETS);
 		
 		block("launcher", "launcher",                new LauncherBlock(2.0), Engination.ENGINATION_GADGETS);
 		block("launcher", "forceful_launcher",       new LauncherBlock(3.0), Engination.ENGINATION_GADGETS);

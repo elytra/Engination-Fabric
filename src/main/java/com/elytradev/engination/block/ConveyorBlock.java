@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
 import net.minecraft.entity.LivingEntity;
+import net.minecraft.entity.MovementType;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
@@ -19,7 +20,7 @@ import net.minecraft.world.World;
 
 public class ConveyorBlock extends PressureTriggeredBlock {
 	public static DirectionProperty FACING = Properties.HORIZONTAL_FACING;
-	protected double force = 2.0;
+	protected double force;
 	
 	protected ConveyorBlock(double force) {
 		super(Settings.of(Material.METAL, DyeColor.WHITE).strength(1, 15));
@@ -51,22 +52,6 @@ public class ConveyorBlock extends PressureTriggeredBlock {
 		Direction facing = world.getBlockState(pos).get(FACING);
 		Vec3i vec = facing.getVector();
 		Vec3d motion = new Vec3d(vec.getX()*force, vec.getY()*force, vec.getZ()*force);
-		
-		Vec3d oldVelocity = entity.getVelocity();
-		
-		entity.setVelocity(
-				adjustScalar(oldVelocity.x , motion.x),
-				adjustScalar(oldVelocity.y , motion.y),
-				adjustScalar(oldVelocity.z , motion.z));
-	}
-	
-	private double adjustScalar(double in, double floor) {
-		if (floor<0) {
-			return (floor < in) ? floor : in;
-		} else if (floor>0) {
-			return (floor > in) ? floor : in;
-		}
-		
-		return in;
+		entity.move(MovementType.SELF, motion);
 	}
 }

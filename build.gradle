@@ -39,3 +39,7 @@ java {
 	// If you remove this line, sources will not be generated.
 	withSourcesJar()
 }
+
+loom {
+	accessWidenerPath = file("src/main/resources/engination.accesswidener")
+}

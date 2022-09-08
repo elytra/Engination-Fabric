@@ -34,5 +34,6 @@
   },
   "mixins": [
     "engination.client.json"
-  ]
+  ],
+  "accessWidener" : "engination.accesswidener"
 }
