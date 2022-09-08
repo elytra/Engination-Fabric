@@ -192,6 +192,10 @@ public class EnginationBlocks {
 		block("disappearing", "fall_through", new FallThroughBlock(), Engination.ENGINATION_GADGETS);
 		block("disappearing", "disguised_fall_through", new FallThroughBlock(), Engination.ENGINATION_GADGETS);
 		
+		block("road", "road", new FastTravelBlock(0.2f), Engination.ENGINATION_GADGETS);
+		block("road", "fast_road", new FastTravelBlock(0.4f), Engination.ENGINATION_GADGETS);
+		block("road", "ultra_fast_road", new FastTravelBlock(0.6f), Engination.ENGINATION_GADGETS);
+		
 		TOMATO_PLANT = new TomatoBlock(FabricBlockSettings.copy(Blocks.WHEAT));
 		Registry.register(Registry.BLOCK, new Identifier("engination", "tomato_plant"), TOMATO_PLANT);
 	}

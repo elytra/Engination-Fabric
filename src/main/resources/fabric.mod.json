@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "engination",
-  "version": "1.0.3",
+  "version": "1.0.4",
 
   "name": "Engination Enginogrammetry",
   "description": "Creative Cubes and Conventional Curiosities",
@@ -33,6 +33,5 @@
     "fabric": "*"
   },
   "mixins": [
-    "engination.client.json"
   ]
 }
